@@ -13,6 +13,7 @@
     align-items: center;
     justify-content: space-between;
     max-width: 100%;
+    border-bottom: 3px solid #000000;
 }
 
 .nav-Logo {
@@ -33,7 +34,13 @@
     font-weight: 600;
     font-size: 20px;
     text-decoration: none;
-    padding-right: 20px;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.nav-Items:hover {
+    background-color: #5bb669;
+    color: #000000;
 }
 
 @media (max-width: 992px) {
