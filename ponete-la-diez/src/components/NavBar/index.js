@@ -1,8 +1,8 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import CartWidget from "../CartWidget";
 import "./NavBar.css";
-import logo from "./logo.png";
 
 //Componente
 const LinkMenu = (props) => {
@@ -18,7 +18,7 @@ function NavBar() {
         <Navbar id="navegation-Bar" expand="lg">
             <Container id="nav-Container">
                 <Navbar.Brand href="#home">
-                    <img src={logo} className="nav-Logo" alt="logo"></img>
+                    <CartWidget />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
