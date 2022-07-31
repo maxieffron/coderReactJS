@@ -1,13 +1,13 @@
 .ItemListContainer {
     width: 100%;
     min-height: 400px;
-    border: 3px solid #5bb669;
+    border: 3px solid var(--secondaryColor); /*Verde*/
     margin-top: 10px;
 }
 
 .ItemListContainer h1 {
     padding-top: 10px;
-    color: #4c98df;
+    color: var(--primaryColor); /*Azul*/
     font-family: "Roboto";
     font-weight: 600;
     text-transform: uppercase;

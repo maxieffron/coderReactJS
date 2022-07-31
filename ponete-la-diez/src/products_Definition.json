@@ -1,0 +1,184 @@
+{
+    "productos": [
+        {
+            "idProducto": 1,
+            "nombre": "Almagro Titular",
+            "equipo": "Almagro",
+            "categoria": "Ascenso",
+            "pais": "Argentina",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "precio": 3000,
+            "descuento": 0,
+            "imagenAnverso": "../public/images/products/Ascenso/Almagro - Frente.jpg",
+            "imagenReverso": "../public/images/products/Ascenso/Almagro - Reverso.jpg"
+        },
+        {
+            "idProducto": 2,
+            "nombre": "Almirante Brown Titular",
+            "equipo": "Almirante Brown",
+            "categoria": "Ascenso",
+            "pais": "Argentina",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "precio": 3000,
+            "descuento": 0,
+            "imagenAnverso": "../public/images/products/Ascenso/Almirante Brown - Frente.jpg",
+            "imagenReverso": "../public/images/products/Ascenso/Almirante Brown - Reverso.jpg"
+        },
+        {
+            "idProducto": 3,
+            "nombre": "Atlanta Suplente",
+            "equipo": "Atlanta",
+            "categoria": "Ascenso",
+            "pais": "Argentina",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "precio": 3000,
+            "descuento": 0,
+            "imagenAnverso": "../public/images/products/Ascenso/Atlanta - Frente.png",
+            "imagenReverso": "../public/images/products/Ascenso/Atlanta - Reverso.png"
+        },
+        {
+            "idProducto": 4,
+            "nombre": "Berazategui Titular",
+            "equipo": "Berazategui",
+            "categoria": "Ascenso",
+            "pais": "Argentina",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "precio": 3000,
+            "descuento": 0,
+            "imagenAnverso": "../public/images/products/Ascenso/Berazategui - Frente.jpg",
+            "imagenReverso": "../public/images/products/Ascenso/Berazategui - Reverso.jpg"
+        },
+        {
+            "idProducto": 5,
+            "nombre": "Brown de Adrogué Titular",
+            "equipo": "Brown de Adrogué",
+            "categoria": "Ascenso",
+            "pais": "Argentina",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "precio": 3000,
+            "descuento": 0,
+            "imagenAnverso": "../public/images/products/Ascenso/Brown Adrogue - Frente.png",
+            "imagenReverso": "../public/images/products/Ascenso/Brown Adrogue - Reverso.jpg"
+        },
+        {
+            "idProducto": 6,
+            "nombre": "Chacarita Suplente",
+            "equipo": "Chacarita",
+            "categoria": "Ascenso",
+            "pais": "Argentina",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "precio": 3000,
+            "descuento": 0,
+            "imagenAnverso": "../public/images/products/Ascenso/Chacarita - Frente.png",
+            "imagenReverso": "../public/images/products/Ascenso/Chacarita - Reverso.jpg"
+        },
+        {
+            "idProducto": 7,
+            "nombre": "Deportivo Español Titular",
+            "equipo": "Deportivo Español",
+            "categoria": "Ascenso",
+            "pais": "Argentina",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "precio": 3000,
+            "descuento": 0,
+            "imagenAnverso": "../public/images/products/Ascenso/Dep. Español - Frente.jpg",
+            "imagenReverso": "../public/images/products/Ascenso/Dep. Español - Reverso.jpg"
+        },
+        {
+            "idProducto": 8,
+            "nombre": "Ferro Titular",
+            "equipo": "Ferrocarril Oeste",
+            "categoria": "Ascenso",
+            "pais": "Argentina",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "precio": 3000,
+            "descuento": 0,
+            "imagenAnverso": "../public/images/products/Ascenso/Ferro - Frente.png",
+            "imagenReverso": "../public/images/products/Ascenso/Ferro - Reverso.jpg"
+        },
+        {
+            "idProducto": 9,
+            "nombre": "Racing de Córdoba Titular",
+            "equipo": "Racing de Córdoba",
+            "categoria": "Ascenso",
+            "pais": "Argentina",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "precio": 3000,
+            "descuento": 0,
+            "imagenAnverso": "../public/images/products/Ascenso/Racing de Cordoba - Frente.jpg",
+            "imagenReverso": "../public/images/products/Ascenso/Racing de Cordoba - Reverso.jpg"
+        },
+        {
+            "idProducto": 10,
+            "nombre": "San Miguel Titular",
+            "equipo": "San Miguel",
+            "categoria": "Ascenso",
+            "pais": "Argentina",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "precio": 3000,
+            "descuento": 0,
+            "imagenAnverso": "../public/images/products/Ascenso/San Miguel - Frente.jpg",
+            "imagenReverso": "../public/images/products/Ascenso/San Miguel - Reverso.jpg"
+        }
+    ]
+}

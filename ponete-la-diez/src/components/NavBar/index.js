@@ -1,7 +1,14 @@
+/*** 
+Componente para armar la barra de navegación. La misma se compone de otros componentes:
+LinkMenu: Link de cada una de las secciones del sitio.
+CartWidget: Logo de la marca.
+ ***/
+
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import CartWidget from "../CartWidget";
+import "../../index.css";
 import "./NavBar.css";
 
 //Componente

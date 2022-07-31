@@ -1,0 +1,47 @@
+.ItemCountContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 25%;
+    height: 60px;
+    margin-left: 300px;
+    background-color: var(--primaryColor);
+    border-radius: 6px;
+}
+
+.Item-Button {
+    display: inline-block;
+    width: 46px;
+    height: 46px;
+    background-color: var(--secondaryColor); /*Verde*/
+    border-radius: 50%;
+    border: 2px solid black;
+
+    /*margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 50%;*/
+}
+
+.Item-p,
+.Item-cantProd {
+    display: inline-block;
+    /*margin-top: 0;
+    margin-bottom: 0;*/
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.Item-p {
+    color: var(--fontColorGeneral);
+    margin-top: -4px;
+}
+
+.Item-cantProd {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0 10px;
+    color: var(--fontColorGeneral);
+}

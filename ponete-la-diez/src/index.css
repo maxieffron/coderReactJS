@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+/*Variables*/
+:root {
+    --primaryColor: #4c98df;
+    --secondaryColor: #5bb669;
+    --fontColorGeneral: #ffffff;
+    --fontColorBlack: #000000;
+}
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
