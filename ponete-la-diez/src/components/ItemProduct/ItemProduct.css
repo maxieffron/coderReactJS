@@ -1,0 +1,23 @@
+/*Container de Todo el producto entero*/
+.ItemProductContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 26%;
+    height: 350px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    box-shadow: 6px 6px 8px #888888;
+}
+
+/*Container de Foto e info*/
+.ProductContainer {
+    width: 100%;
+    height: 85%;
+    /*background-color: darkkhaki;*/
+    border: 2px solid var(--secondaryColor); /*Verde*/
+
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
