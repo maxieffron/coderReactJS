@@ -13,6 +13,7 @@
                 { "talle": "L", "stock": 1500 },
                 { "talle": "XL", "stock": 800 }
             ],
+            "stock": 500,
             "precio": 3000,
             "descuento": 0,
             "imagenAnverso": "../public/images/products/Ascenso/Almagro - Frente.jpg",
@@ -31,6 +32,7 @@
                 { "talle": "L", "stock": 1500 },
                 { "talle": "XL", "stock": 800 }
             ],
+            "stock": 800,
             "precio": 3000,
             "descuento": 0,
             "imagenAnverso": "../public/images/products/Ascenso/Almirante Brown - Frente.jpg",
@@ -49,6 +51,7 @@
                 { "talle": "L", "stock": 1500 },
                 { "talle": "XL", "stock": 800 }
             ],
+            "stock": 1600,
             "precio": 3000,
             "descuento": 0,
             "imagenAnverso": "../public/images/products/Ascenso/Atlanta - Frente.png",
@@ -67,6 +70,7 @@
                 { "talle": "L", "stock": 1500 },
                 { "talle": "XL", "stock": 800 }
             ],
+            "stock": 1000,
             "precio": 3000,
             "descuento": 0,
             "imagenAnverso": "../public/images/products/Ascenso/Berazategui - Frente.jpg",
@@ -85,6 +89,7 @@
                 { "talle": "L", "stock": 1500 },
                 { "talle": "XL", "stock": 800 }
             ],
+            "stock": 4000,
             "precio": 3000,
             "descuento": 0,
             "imagenAnverso": "../public/images/products/Ascenso/Brown Adrogue - Frente.png",
@@ -103,6 +108,7 @@
                 { "talle": "L", "stock": 1500 },
                 { "talle": "XL", "stock": 800 }
             ],
+            "stock": 760,
             "precio": 3000,
             "descuento": 0,
             "imagenAnverso": "../public/images/products/Ascenso/Chacarita - Frente.png",
@@ -121,6 +127,7 @@
                 { "talle": "L", "stock": 1500 },
                 { "talle": "XL", "stock": 800 }
             ],
+            "stock": 2360,
             "precio": 3000,
             "descuento": 0,
             "imagenAnverso": "../public/images/products/Ascenso/Dep. Español - Frente.jpg",
@@ -139,6 +146,7 @@
                 { "talle": "L", "stock": 1500 },
                 { "talle": "XL", "stock": 800 }
             ],
+            "stock": 1604,
             "precio": 3000,
             "descuento": 0,
             "imagenAnverso": "../public/images/products/Ascenso/Ferro - Frente.png",
@@ -157,6 +165,7 @@
                 { "talle": "L", "stock": 1500 },
                 { "talle": "XL", "stock": 800 }
             ],
+            "stock": 3410,
             "precio": 3000,
             "descuento": 0,
             "imagenAnverso": "../public/images/products/Ascenso/Racing de Cordoba - Frente.jpg",
@@ -175,6 +184,7 @@
                 { "talle": "L", "stock": 1500 },
                 { "talle": "XL", "stock": 800 }
             ],
+            "stock": 500,
             "precio": 3000,
             "descuento": 0,
             "imagenAnverso": "../public/images/products/Ascenso/San Miguel - Frente.jpg",

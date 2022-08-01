@@ -29,7 +29,13 @@ export default function ItemCount(props) {
     }, [cantProducts]);
 
     function addProduct() {
-        setCantProducts(cantProducts + 1);
+        if (cantProducts >= props.stock) {
+            alert(
+                "La cantidad de productos seleccionados no puede superar al stock disponible."
+            );
+        } else {
+            setCantProducts(cantProducts + 1);
+        }
     }
 
     function sustProduct() {
@@ -41,7 +47,7 @@ export default function ItemCount(props) {
     }
 
     return (
-        <div className="ItemCountContainer">
+        <div id={`cantProd${props.id}`} className="ItemCountContainer">
             <button onClick={sustProduct} className="Item-Button">
                 <p className="Item-p"> - </p>
             </button>
