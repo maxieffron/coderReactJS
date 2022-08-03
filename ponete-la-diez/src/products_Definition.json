@@ -16,8 +16,8 @@
             "stock": 500,
             "precio": 3000,
             "descuento": 0,
-            "imagenAnverso": "../public/images/products/Ascenso/Almagro - Frente.jpg",
-            "imagenReverso": "../public/images/products/Ascenso/Almagro - Reverso.jpg"
+            "imagenAnverso": "../images/products/Ascenso/Almagro - Frente.jpg",
+            "imagenReverso": "../images/products/Ascenso/Almagro - Reverso.jpg"
         },
         {
             "idProducto": 2,
@@ -35,8 +35,8 @@
             "stock": 800,
             "precio": 3000,
             "descuento": 0,
-            "imagenAnverso": "../public/images/products/Ascenso/Almirante Brown - Frente.jpg",
-            "imagenReverso": "../public/images/products/Ascenso/Almirante Brown - Reverso.jpg"
+            "imagenAnverso": "../images/products/Ascenso/Almirante Brown - Frente.jpg",
+            "imagenReverso": "../images/products/Ascenso/Almirante Brown - Reverso.jpg"
         },
         {
             "idProducto": 3,
@@ -54,8 +54,8 @@
             "stock": 1600,
             "precio": 3000,
             "descuento": 0,
-            "imagenAnverso": "../public/images/products/Ascenso/Atlanta - Frente.png",
-            "imagenReverso": "../public/images/products/Ascenso/Atlanta - Reverso.png"
+            "imagenAnverso": "../images/products/Ascenso/Atlanta - Frente.png",
+            "imagenReverso": "../images/products/Ascenso/Atlanta - Reverso.png"
         },
         {
             "idProducto": 4,
@@ -73,8 +73,8 @@
             "stock": 1000,
             "precio": 3000,
             "descuento": 0,
-            "imagenAnverso": "../public/images/products/Ascenso/Berazategui - Frente.jpg",
-            "imagenReverso": "../public/images/products/Ascenso/Berazategui - Reverso.jpg"
+            "imagenAnverso": "../images/products/Ascenso/Berazategui - Frente.jpg",
+            "imagenReverso": "../images/products/Ascenso/Berazategui - Reverso.jpg"
         },
         {
             "idProducto": 5,
@@ -92,8 +92,8 @@
             "stock": 4000,
             "precio": 3000,
             "descuento": 0,
-            "imagenAnverso": "../public/images/products/Ascenso/Brown Adrogue - Frente.png",
-            "imagenReverso": "../public/images/products/Ascenso/Brown Adrogue - Reverso.jpg"
+            "imagenAnverso": "../images/products/Ascenso/Brown Adrogue - Frente.png",
+            "imagenReverso": "../images/products/Ascenso/Brown Adrogue - Reverso.jpg"
         },
         {
             "idProducto": 6,
@@ -111,8 +111,8 @@
             "stock": 760,
             "precio": 3000,
             "descuento": 0,
-            "imagenAnverso": "../public/images/products/Ascenso/Chacarita - Frente.png",
-            "imagenReverso": "../public/images/products/Ascenso/Chacarita - Reverso.jpg"
+            "imagenAnverso": "../images/products/Ascenso/Chacarita - Frente.png",
+            "imagenReverso": "../images/products/Ascenso/Chacarita - Reverso.jpg"
         },
         {
             "idProducto": 7,
@@ -130,8 +130,8 @@
             "stock": 2360,
             "precio": 3000,
             "descuento": 0,
-            "imagenAnverso": "../public/images/products/Ascenso/Dep. Español - Frente.jpg",
-            "imagenReverso": "../public/images/products/Ascenso/Dep. Español - Reverso.jpg"
+            "imagenAnverso": "../images/products/Ascenso/Dep. Español - Frente.jpg",
+            "imagenReverso": "../images/products/Ascenso/Dep. Español - Reverso.jpg"
         },
         {
             "idProducto": 8,
@@ -149,8 +149,8 @@
             "stock": 1604,
             "precio": 3000,
             "descuento": 0,
-            "imagenAnverso": "../public/images/products/Ascenso/Ferro - Frente.png",
-            "imagenReverso": "../public/images/products/Ascenso/Ferro - Reverso.jpg"
+            "imagenAnverso": "../images/products/Ascenso/Ferro - Frente.png",
+            "imagenReverso": "../images/products/Ascenso/Ferro - Reverso.jpg"
         },
         {
             "idProducto": 9,
@@ -168,8 +168,8 @@
             "stock": 3410,
             "precio": 3000,
             "descuento": 0,
-            "imagenAnverso": "../public/images/products/Ascenso/Racing de Cordoba - Frente.jpg",
-            "imagenReverso": "../public/images/products/Ascenso/Racing de Cordoba - Reverso.jpg"
+            "imagenAnverso": "../images/products/Ascenso/Racing de Cordoba - Frente.jpg",
+            "imagenReverso": "../images/products/Ascenso/Racing de Cordoba - Reverso.jpg"
         },
         {
             "idProducto": 10,
@@ -187,8 +187,8 @@
             "stock": 500,
             "precio": 3000,
             "descuento": 0,
-            "imagenAnverso": "../public/images/products/Ascenso/San Miguel - Frente.jpg",
-            "imagenReverso": "../public/images/products/Ascenso/San Miguel - Reverso.jpg"
+            "imagenAnverso": "../images/products/Ascenso/San Miguel - Frente.jpg",
+            "imagenReverso": "../images/products/Ascenso/San Miguel - Reverso.jpg"
         }
     ]
 }
