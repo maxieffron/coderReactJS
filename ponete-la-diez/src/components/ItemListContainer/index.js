@@ -12,7 +12,7 @@ import Products from "../../products_Definition.json";
 
 function ItemListContainer(props) {
     const [prod, setProduct] = useState([]);
-    const [loadingProd, setLoadingProd] = useState(true);
+    //const [loadingProd, setLoadingProd] = useState(true);
 
     useEffect(() => {
         //Acá vamos a crear una promesa para traer todos los productos POR ÚNICA VEZ
@@ -27,16 +27,18 @@ function ItemListContainer(props) {
             }),
             setTimeout(() => {
                 setProduct(Products.productos);
-            }, 3000)
+            }, 2000)
         );
         getProductos.catch(
             console.log("Error al intentar obtener los productos")
         );
 
+        /*
         getProductos.finally(
             //Con esto indicamos que la apertura del e-commerce ya está hecha.
             setLoadingProd(false)
         );
+        */
     }, []);
 
     return (
