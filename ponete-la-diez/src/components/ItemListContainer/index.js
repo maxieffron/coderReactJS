@@ -11,28 +11,36 @@ import Products from "../../products_Definition.json";
 
 function ItemListContainer(props) {
     const [prod, setProduct] = useState([]);
+    const [loadingProd, setLoadingProd] = useState(true);
 
     useEffect(() => {
-        //Acá vamos a hacer correr el fetch para traer todos los productos POR ÚNICA VEZ
-        const getProductos = new Promise(() => {
-            getProductos.then(
-                setTimeout(() => {
-                    setProduct(Products.productos);
-                }, 2000)
-            );
-            getProductos.catch(
-                console.log("Error al intentar obtener los productos")
-            );
-        });
+        //Acá vamos a crear una promesa para traer todos los productos POR ÚNICA VEZ
+        const getProductos = new Promise(() => {});
+        getProductos.then(
+            setTimeout(() => {
+                setProduct(Products.productos);
+            }, 2000)
+        );
+        getProductos.catch(
+            console.log("Error al intentar obtener los productos")
+        );
+
+        getProductos.finally(
+            //Con esto indicamos que la apertura del e-commerce ya está hecha.
+            setLoadingProd(false)
+        );
     }, []);
 
     return (
         <div className="ItemListContainer">
             <h1>{props.greeting}</h1>
-            {/*<ItemProduct itemProds={1} stock={6} id={1} />*/}
 
-            {/*Pasamos el array de productos que traje del JSON */}
-            <ItemProduct product={prod} />
+            {loadingProd ? (
+                <h4>Acá metemos un Sweet Alert</h4>
+            ) : (
+                /*Pasamos el array de productos que traje del JSON */
+                <ItemProduct product={prod} />
+            )}
         </div>
     );
 }

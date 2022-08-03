@@ -13,20 +13,12 @@ export default function ItemCount(props) {
 
     /*
     useEffect(() => {
-        console.log("%c    Renderizado Siempre", "color: #38761d");
-        return () => {
-            console.log("Contador listo para ser cleanup!");
-            
-        };
-    });
-    */
-
-    useEffect(() => {
         console.log("%c    >>>>> Renderizado cantProducts", "color: #00761d");
         return () => {
             //console.log("Contador listo para ser cleanup!");
         };
     }, [cantProducts]);
+    */
 
     function addProduct() {
         if (cantProducts >= props.stock) {

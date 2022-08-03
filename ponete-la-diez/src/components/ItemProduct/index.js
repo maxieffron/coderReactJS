@@ -15,11 +15,11 @@ export default function ItemProduct(props) {
         <div className="ItemProductContainer">
             {
                 /*Se recorren todos los productos que se obtuvieron de leer el JSON, y
-            que se encuentran en el array products.
+            que se encuentran en el array product.
             */
                 props.product.map((data) => {
                     return (
-                        <div>
+                        <div className="dataProduct-container">
                             <Product dataProduct={data} />
                             <ItemCount
                                 id={data.idProducto}
@@ -27,12 +27,6 @@ export default function ItemProduct(props) {
                                 stock={data.stock}
                             />
                         </div>
-
-                        /*<ItemCount
-                        id={data.idProducto}
-                        cantInitial={1}
-                        stock={data.stock}
-                />*/
                     );
                 })
             }
