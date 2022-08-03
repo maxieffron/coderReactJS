@@ -2,7 +2,8 @@
 Componente para incrementar o decrementar la cantidad de productos que  se van a añadir al carrito de compras.
  ***/
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import swal from "sweetalert2";
 // hooks
 import "../../index.css";
 import "./ItemCount.css";
@@ -11,20 +12,15 @@ export default function ItemCount(props) {
     //En useState inicializo el valor de cantProducts
     const [cantProducts, setCantProducts] = useState(props.cantInitial);
 
-    /*
-    useEffect(() => {
-        console.log("%c    >>>>> Renderizado cantProducts", "color: #00761d");
-        return () => {
-            //console.log("Contador listo para ser cleanup!");
-        };
-    }, [cantProducts]);
-    */
-
     function addProduct() {
         if (cantProducts >= props.stock) {
-            alert(
-                "La cantidad de productos seleccionados no puede superar al stock disponible."
-            );
+            swal.fire({
+                title: "La cantidad de productos seleccionados no puede superar al stock disponible",
+                icon: "warning",
+                confirmButtonText: "Aceptar",
+                imageAlt: "Logo Ponete La Diez",
+                confirmButtonColor: "#4c98df",
+            });
         } else {
             setCantProducts(cantProducts + 1);
         }
@@ -32,7 +28,15 @@ export default function ItemCount(props) {
 
     function sustProduct() {
         if (cantProducts <= 1) {
-            alert("Al menos debe haber un producto disponible");
+            //alert("Al menos debe haber un producto disponible");
+
+            swal.fire({
+                title: "Al menos debe haber un producto seleccionado",
+                icon: "warning",
+                confirmButtonText: "Aceptar",
+                imageAlt: "Logo Ponete La Diez",
+                confirmButtonColor: "#4c98df",
+            });
         } else {
             setCantProducts(cantProducts - 1);
         }

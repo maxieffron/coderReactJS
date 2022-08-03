@@ -3,6 +3,7 @@ Componente que funciona como "contenedor principal" para todo lo que va a estar 
 de una página del sitio.
  ***/
 import { useState, useEffect } from "react";
+import Swal from "sweetalert2";
 import "../../index.css";
 import "./ItemListContainer.css";
 //import { useState, useEffect } from "react";
@@ -17,9 +18,16 @@ function ItemListContainer(props) {
         //Acá vamos a crear una promesa para traer todos los productos POR ÚNICA VEZ
         const getProductos = new Promise(() => {});
         getProductos.then(
+            Swal.fire({
+                title: "Bienvenido/a!!",
+                text: "Ingresando al shopping...",
+                icon: "success",
+                showConfirmButton: false,
+                timer: 2000,
+            }),
             setTimeout(() => {
                 setProduct(Products.productos);
-            }, 2000)
+            }, 3000)
         );
         getProductos.catch(
             console.log("Error al intentar obtener los productos")
@@ -35,12 +43,8 @@ function ItemListContainer(props) {
         <div className="ItemListContainer">
             <h1>{props.greeting}</h1>
 
-            {loadingProd ? (
-                <h4>Acá metemos un Sweet Alert</h4>
-            ) : (
-                /*Pasamos el array de productos que traje del JSON */
-                <ItemProduct product={prod} />
-            )}
+            {/*Pasamos el array de productos que traje del JSON*/}
+            <ItemProduct product={prod} />
         </div>
     );
 }
