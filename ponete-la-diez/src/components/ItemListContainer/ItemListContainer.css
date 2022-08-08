@@ -4,11 +4,3 @@
     /*border: 3px solid var(--secondaryColor); /*Verde*/
     margin-top: 10px;
 }
-
-.ItemListContainer h1 {
-    padding-top: 10px;
-    color: var(--primaryColor); /*Azul*/
-    font-family: "Roboto";
-    font-weight: 600;
-    text-transform: uppercase;
-}

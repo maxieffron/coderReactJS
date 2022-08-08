@@ -4,12 +4,16 @@ Componente para poner los datos de cada producto. Contiene:
 - Botón "Ver Detalle"
 ***/
 
+import { useNavigate } from "react-router-dom";
 import "./Item.css";
-import "../../index.css";
 
 function Item(props) {
+    const navigateFn = useNavigate();
+
     const loadDetails = () => {
         //Se llama a la navegación que nos llevará a ver el detalle
+        navigateFn(`/details/${props.dataProduct.idProducto}`);
+        //alert("pepe");
     };
 
     return (
@@ -40,6 +44,12 @@ function Item(props) {
                     <p>Stock:{props.dataProduct.stock}</p>
                 </div>
                 <div className="product-detail">
+                    {/*<Link to={`/details/${props.dataProduct.idProducto}`}>
+                        <button onClick={loadDetails}>
+                            <span>Ver Detalle</span>
+                        </button>
+                    </Link>
+                    */}
                     <button onClick={loadDetails}>
                         <span>Ver Detalle</span>
                     </button>

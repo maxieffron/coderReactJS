@@ -5,7 +5,7 @@ Componente para incrementar o decrementar la cantidad de productos que  se van a
 import { useState } from "react";
 import swal from "sweetalert2";
 // hooks
-import "../../index.css";
+/*import "../../index.css";*/
 import "./ItemCount.css";
 
 export default function ItemCount(props) {

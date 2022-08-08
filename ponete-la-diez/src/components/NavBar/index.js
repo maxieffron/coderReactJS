@@ -8,15 +8,16 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import CartWidget from "../CartWidget";
-import "../../index.css";
+import { Link } from "react-router-dom";
+/*import "../../index.css";*/
 import "./NavBar.css";
 
 //Componente
 const LinkMenu = (props) => {
     return (
-        <a href={props.href} className="nav-Items">
+        <Link to={props.href} className="nav-Items">
             {props.itemMenu}
-        </a>
+        </Link>
     );
 };
 
@@ -30,14 +31,14 @@ function NavBar() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="nav-Menu">
-                        <LinkMenu href={"#home"} itemMenu={"Inicio"} />
-                        <LinkMenu href={"#link"} itemMenu={"Nosotros"} />
-                        <LinkMenu href={"#link"} itemMenu={"Productos"} />
+                        <LinkMenu href={"/home"} itemMenu={"Inicio"} />
+                        <LinkMenu href={"/AboutUs"} itemMenu={"Nosotros"} />
+                        <LinkMenu href={"/Products"} itemMenu={"Productos"} />
                         <LinkMenu
-                            href={"#link"}
+                            href={"/Faq"}
                             itemMenu={"Preguntas Frecuentes"}
                         />
-                        <LinkMenu href={"#link"} itemMenu={"Contacto"} />
+                        <LinkMenu href={"/Contact"} itemMenu={"Contacto"} />
                     </Nav>
                 </Navbar.Collapse>
             </Container>

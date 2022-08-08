@@ -25,3 +25,12 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
 }
+
+h1 {
+    padding-top: 10px;
+    color: var(--primaryColor); /*Azul*/
+    font-family: "Roboto";
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}

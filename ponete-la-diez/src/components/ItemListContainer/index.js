@@ -4,9 +4,8 @@ de una página del sitio.
  ***/
 import { useState, useEffect } from "react";
 import Swal from "sweetalert2";
-import "../../index.css";
+/*import "../../index.css";*/
 import "./ItemListContainer.css";
-//import { useState, useEffect } from "react";
 import ItemProduct from "../ItemProduct";
 import Products from "../../products_Definition.json";
 
