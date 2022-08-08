@@ -14,9 +14,14 @@ export default function ProductDetailContainer() {
 
     /*Cada vez que venga por parámetro un id difernte, vamos a realizar una nueva petición que nos devuelva el producto que necesitamos para luego poder llamar al componente y ver su detalle
      */
+
     function getDetail(id) {
         return new Promise((resolve, reject) => {
-            resolve(Products.find((data) => data.idProdu === id));
+            resolve(
+                Products.productos.find(
+                    (data) => data.idProducto === Number(id)
+                )
+            );
             reject(alert("No hay datos"));
         });
     }
@@ -24,7 +29,7 @@ export default function ProductDetailContainer() {
     useEffect(() => {
         getDetail(idProdu)
             .then((productFound) => {
-                setProd(productFound);
+                setProd(JSON.parse(productFound));
             })
             .catch((error) => {
                 alert(error);
