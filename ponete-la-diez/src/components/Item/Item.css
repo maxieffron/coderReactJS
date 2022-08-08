@@ -58,7 +58,7 @@
 /*Container del Nombre del producto*/
 .product-name {
     width: 100%;
-    height: 55%;
+    height: 35%;
 }
 
 .product-name > h3 {
@@ -73,7 +73,7 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     width: 100%;
-    height: 45%;
+    height: 25%;
 }
 
 .product-description p {
@@ -93,4 +93,31 @@
 /*Stock*/
 .product-description p:nth-child(2) {
     margin-right: 10px;
+}
+
+/*Ver Detalle*/
+.product-detail {
+    width: 100%;
+    height: 40%;
+}
+
+.product-detail button {
+    margin-top: 2px;
+    border: 2px solid var(--primaryColor); /*Azul*/
+    border-radius: 6px;
+    box-shadow: 4px 4px 8px #888888;
+}
+
+.product-detail button:hover {
+    background-color: var(--primaryColor); /*Azul*/
+}
+
+.product-detail button span {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.product-detail button span:hover {
+    color: var(--fontColorGeneral); /*Blanco*/
 }

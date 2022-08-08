@@ -1,14 +1,13 @@
 /*** 
 Componente que contiene la lista de productos. El mismo se compone de:
-- Componente Product
+- Componente Item
 - Componente ItemCount
-- Botón para añadir el producto al carrito de compras
  ***/
 
 import "./ItemProduct.css";
 import "../../index.css";
 import ItemCount from "../ItemCount";
-import Product from "../Product";
+import Item from "../Item";
 
 export default function ItemProduct(props) {
     return (
@@ -20,8 +19,9 @@ export default function ItemProduct(props) {
                 props.product.map((data) => {
                     return (
                         <div className="dataProduct-container">
-                            <Product dataProduct={data} />
+                            <Item dataProduct={data} />
                             <ItemCount
+                                key={data.idProducto}
                                 id={data.idProducto}
                                 cantInitial={1}
                                 stock={data.stock}

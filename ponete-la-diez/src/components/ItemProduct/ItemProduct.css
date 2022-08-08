@@ -5,7 +5,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 90%;
-    min-height: 350px;
+    min-height: 500px;
     margin-left: 5%;
     margin-bottom: 5%;
 
@@ -18,7 +18,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     margin: 40px 10px;
-    width: 20%;
-    min-height: 350px;
+    width: 25%;
+    min-height: 500px;
     box-shadow: 6px 6px 8px #888888;
 }
