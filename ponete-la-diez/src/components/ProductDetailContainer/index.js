@@ -15,49 +15,15 @@ export default function ProductDetailContainer() {
     /*Cada vez que venga por parámetro un id difernte, vamos a realizar una nueva petición que nos devuelva el producto que necesitamos para luego poder llamar al componente y ver su detalle
      */
 
-    /*
-    function getDetail(id) {
-        return new Promise((resolve, reject) => {
-            resolve(
-                Products.productos.find(
-                    (data) => data.idProducto === Number(id)
-                )
-            );
-            reject("No hay datos");
-        });
-    }
-
-    useEffect(() => {
-        getDetail(idProdu)
-            .then((productFound) => {
-                setProd(JSON.parse(productFound));
-            })
-            .catch((error) => {
-                alert(error);
-            });
-    }, [idProdu]);
-    */
-
-    /*
-    function getDetail(id) {
-        return new Promise((resolve) => {
-            resolve(Products.productos);
-        });
-    }
-    */
-
     useEffect(() => {
         const getDetail = new Promise((resolve) => {
             resolve(Products.productos);
         });
         getDetail.then((productFound) => {
-            setProd(
-                JSON.parse(
-                    productFound.find(
-                        (data) => data.idProducto === Number(idProdu)
-                    )
-                )
+            const dataProd = productFound.find(
+                (data) => data.idProducto === Number(idProdu)
             );
+            setProd(dataProd);
         });
         getDetail.catch((error) => {
             alert(error);
