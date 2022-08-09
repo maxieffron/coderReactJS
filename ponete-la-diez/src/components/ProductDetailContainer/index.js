@@ -15,6 +15,7 @@ export default function ProductDetailContainer() {
     /*Cada vez que venga por parámetro un id difernte, vamos a realizar una nueva petición que nos devuelva el producto que necesitamos para luego poder llamar al componente y ver su detalle
      */
 
+    /*
     function getDetail(id) {
         return new Promise((resolve, reject) => {
             resolve(
@@ -22,7 +23,7 @@ export default function ProductDetailContainer() {
                     (data) => data.idProducto === Number(id)
                 )
             );
-            reject(alert("No hay datos"));
+            reject("No hay datos");
         });
     }
 
@@ -34,6 +35,33 @@ export default function ProductDetailContainer() {
             .catch((error) => {
                 alert(error);
             });
+    }, [idProdu]);
+    */
+
+    /*
+    function getDetail(id) {
+        return new Promise((resolve) => {
+            resolve(Products.productos);
+        });
+    }
+    */
+
+    useEffect(() => {
+        const getDetail = new Promise((resolve) => {
+            resolve(Products.productos);
+        });
+        getDetail.then((productFound) => {
+            setProd(
+                JSON.parse(
+                    productFound.find(
+                        (data) => data.idProducto === Number(idProdu)
+                    )
+                )
+            );
+        });
+        getDetail.catch((error) => {
+            alert(error);
+        });
     }, [idProdu]);
 
     return (

@@ -1,6 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import "./ProductDetail.css";
 
 function ProductDetail(props) {
+    const navigateFn = useNavigate();
+    function comeBackProducts() {
+        //Se llama a la navegación que nos llevará a ver el detalle
+        navigateFn(`/Products`);
+    }
+
     return (
         <div className="ProductDetail">
             <div className="Detail-info-Container">
@@ -28,6 +35,10 @@ function ProductDetail(props) {
                     <h3>Precio:</h3>
                     <h4>{` $${props.precio}`}</h4>
                 </div>
+
+                <button className="button-ComeBack" onClick={comeBackProducts}>
+                    Volver
+                </button>
             </div>
             <div className="Detail-photo-Container">
                 <img

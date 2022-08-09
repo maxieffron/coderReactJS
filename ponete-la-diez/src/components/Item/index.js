@@ -13,7 +13,6 @@ function Item(props) {
     const loadDetails = () => {
         //Se llama a la navegación que nos llevará a ver el detalle
         navigateFn(`/details/${props.dataProduct.idProducto}`);
-        //alert("pepe");
     };
 
     return (
