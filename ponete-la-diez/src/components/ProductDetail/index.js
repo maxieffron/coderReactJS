@@ -8,6 +8,24 @@ function ProductDetail(props) {
         navigateFn(`/Products`);
     }
 
+    function otherViewOver() {
+        //Pasaje de la vista Anverso a Reverso
+        const img = document.getElementById("img-detail");
+
+        img.getAttribute("src") === props.imagenAnverso
+            ? img.setAttribute("src", props.imagenReverso)
+            : img.setAttribute("src", props.imagenAnverso);
+    }
+
+    function otherViewOut() {
+        //Pasaje de la vista Reverso a Anverso
+        const img = document.getElementById("img-detail");
+
+        img.getAttribute("src") === props.imagenReverso
+            ? img.setAttribute("src", props.imagenAnverso)
+            : img.setAttribute("src", props.imagenReverso);
+    }
+
     return (
         <div className="ProductDetail">
             <div className="Detail-info-Container">
@@ -42,6 +60,9 @@ function ProductDetail(props) {
             </div>
             <div className="Detail-photo-Container">
                 <img
+                    id="img-detail"
+                    onMouseOver={otherViewOver}
+                    onMouseOut={otherViewOut}
                     className="Detail-img"
                     src={props.imagenAnverso}
                     alt={props.nombre}
