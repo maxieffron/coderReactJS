@@ -1,7 +1,7 @@
 //import logo from "./logo.svg";
 import "./App.css";
 //Referenciamos el componente "NavBar"
-import NavBar from "./components/NavBar";
+import NavBar from "./components/NavegationBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 //import ItemListContainer from "./components/ItemListContainer";
 //import ProductDetailContainer from "./components/ProductDetailContainer";

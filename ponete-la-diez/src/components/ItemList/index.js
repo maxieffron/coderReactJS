@@ -4,14 +4,14 @@ Componente que contiene la lista de productos. El mismo se compone de:
 - Componente ItemCount
  ***/
 
-import "./ItemProduct.css";
+import "./ItemList.css";
 /*import "../../index.css";*/
 import ItemCount from "../ItemCount";
 import Item from "../Item";
 
-export default function ItemProduct(props) {
+export default function ItemList(props) {
     return (
-        <div className="ItemProductContainer">
+        <div className="ItemListContainer">
             {
                 /*Se recorren todos los productos que se obtuvieron de leer el JSON, y
             que se encuentran en el array product.

@@ -1,12 +1,6 @@
-/*** 
-Componente que contiene el logo de la marca para insertarlo en el navBar.
- ***/
-
 import "./CartWidget.css";
-import logo from "./logo.png";
+import Cart from "./Cart_Icon.png";
 
-function CartWidget() {
-    return <img src={logo} className="nav-Logo" alt="logo"></img>;
+export default function CartWidget() {
+    return <img className="img-Cart" src={Cart} alt="Carrito de Compras"></img>;
 }
-
-export default CartWidget;

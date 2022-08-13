@@ -43,7 +43,11 @@ export default function ItemCount(props) {
     }
 
     return (
-        <div id={`cantProd${props.id}`} className="ItemCountContainer">
+        <div
+            key={props.id}
+            id={`cantProd${props.id}`}
+            className="ItemCountContainer"
+        >
             <button onClick={sustProduct} className="Item-Button">
                 <p className="Item-p"> - </p>
             </button>

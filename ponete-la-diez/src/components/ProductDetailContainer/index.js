@@ -32,9 +32,9 @@ export default function ProductDetailContainer() {
 
     return (
         <div>
-            <h1>"Detalle"</h1>
+            <h1>Detalle</h1>
             <div className="ProductDetailContainer">
-                <ProductDetail {...prod} />
+                <ProductDetail key={prod.idProducto} {...prod} />
             </div>
         </div>
     );

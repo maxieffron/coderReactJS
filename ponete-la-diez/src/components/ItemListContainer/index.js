@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import Swal from "sweetalert2";
 /*import "../../index.css";*/
 import "./ItemListContainer.css";
-import ItemProduct from "../ItemProduct";
+import ItemList from "../ItemList";
 import Products from "../../products_Definition.json";
 
 function ItemListContainer(props) {
@@ -45,7 +45,7 @@ function ItemListContainer(props) {
             <h1>{props.greeting}</h1>
 
             {/*Pasamos el array de productos que traje del JSON*/}
-            <ItemProduct product={prod} />
+            <ItemList product={prod} />
         </div>
     );
 }

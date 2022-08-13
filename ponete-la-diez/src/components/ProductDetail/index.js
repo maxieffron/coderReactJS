@@ -1,11 +1,16 @@
 import { useNavigate } from "react-router-dom";
 import "./ProductDetail.css";
+import ItemCount from "../ItemCount";
 
 function ProductDetail(props) {
     const navigateFn = useNavigate();
     function comeBackProducts() {
-        //Se llama a la navegación que nos llevará a ver el detalle
+        //Se llama a la navegación que nos llevará a ver los productos
         navigateFn(`/Products`);
+    }
+
+    function addCartProducts() {
+        /*Acá se van a ir agregando los productos */
     }
 
     function otherViewOver() {
@@ -54,9 +59,25 @@ function ProductDetail(props) {
                     <h4>{` $${props.precio}`}</h4>
                 </div>
 
-                <button className="button-ComeBack" onClick={comeBackProducts}>
-                    Volver
-                </button>
+                <div className="buttons-detail">
+                    <button
+                        className="button-ComeBack"
+                        onClick={comeBackProducts}
+                    >
+                        Volver
+                    </button>
+
+                    <button
+                        className="button-AddCart"
+                        onClick={addCartProducts}
+                    >
+                        Agregar al carrito
+                    </button>
+                </div>
+
+                <div className="itemCountDetailContainer">
+                    <ItemCount cantInitial={1} />
+                </div>
             </div>
             <div className="Detail-photo-Container">
                 <img

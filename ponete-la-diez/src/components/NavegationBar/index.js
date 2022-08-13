@@ -1,16 +1,17 @@
 /*** 
 Componente para armar la barra de navegación. La misma se compone de otros componentes:
 LinkMenu: Link de cada una de las secciones del sitio.
-CartWidget: Logo de la marca.
+LogoWidget: Logo de la marca.
  ***/
 
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import LogoWidget from "../LogoWidget";
 import CartWidget from "../CartWidget";
 import { Link } from "react-router-dom";
 /*import "../../index.css";*/
-import "./NavBar.css";
+import "./NavegationBar.css";
 
 //Componente
 const LinkMenu = (props) => {
@@ -21,12 +22,12 @@ const LinkMenu = (props) => {
     );
 };
 
-function NavBar() {
+function NavegationBar() {
     return (
         <Navbar id="navegation-Bar" expand="lg">
             <Container id="nav-Container">
                 <Navbar.Brand href="#home">
-                    <CartWidget />
+                    <LogoWidget />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -41,9 +42,10 @@ function NavBar() {
                         <LinkMenu href={"/Contact"} itemMenu={"Contacto"} />
                     </Nav>
                 </Navbar.Collapse>
+                <CartWidget />
             </Container>
         </Navbar>
     );
 }
 
-export default NavBar;
+export default NavegationBar;

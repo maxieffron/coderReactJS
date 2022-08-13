@@ -19,7 +19,7 @@ function Item(props) {
         //Aquí recorremos el array con la imágen y la info del producto
 
         <div
-            key={`prod${props.dataProduct.idProducto}`}
+            key={props.dataProduct.idProducto}
             id={`prod${props.dataProduct.idProducto}`}
             className="ProductContainer"
         >
