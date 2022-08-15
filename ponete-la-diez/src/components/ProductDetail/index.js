@@ -33,7 +33,7 @@ function ProductDetail(props) {
 
     function qstContinueBuy() {
         swal.fire({
-            title: `Producto ${props.nombre} añadido`,
+            title: `Producto "${props.nombre}"  añadido`,
             text: "¿Seguimos comprando o cerramos acá?",
 
             icon: "success",
