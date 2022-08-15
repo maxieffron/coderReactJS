@@ -11,6 +11,7 @@ import AboutUs from "./pages/AboutUs";
 import Products from "./pages/Products";
 import Faq from "./pages/Faq";
 import Contact from "./pages/Contact";
+import Cart from "./pages/Cart";
 //import ProductDetailFound from "./pages/Details";
 import ProductDetailContainer from "./components/ProductDetailContainer";
 
@@ -31,6 +32,7 @@ function App() {
                     />
                     <Route path="/Faq" element={<Faq />} />
                     <Route path="/Contact" element={<Contact />} />
+                    <Route path="/Cart" element={<Cart />} />
                 </Routes>
             </div>
         </BrowserRouter>

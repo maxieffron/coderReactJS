@@ -23,6 +23,7 @@ export default function ItemCount(props) {
             });
         } else {
             setCantProducts(cantProducts + 1);
+            //props.onUpdateCount(cantProducts + 1);
         }
     }
 
@@ -39,6 +40,7 @@ export default function ItemCount(props) {
             });
         } else {
             setCantProducts(cantProducts - 1);
+            //props.onUpdateCount(cantProducts - 1);
         }
     }
 

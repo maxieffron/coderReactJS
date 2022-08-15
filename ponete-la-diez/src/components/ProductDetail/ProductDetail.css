@@ -64,7 +64,8 @@
     /*margin-top: 24px;*/
 }
 
-.button-ComeBack:hover {
+.button-ComeBack:hover,
+.button-AddCart:hover {
     color: var(--fontColorGeneral); /*Blanco*/
     background-color: var(--primaryColor); /*Azul*/
 }
