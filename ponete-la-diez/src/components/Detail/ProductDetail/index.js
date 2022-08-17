@@ -1,13 +1,14 @@
-//import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import swal from "sweetalert2";
 import "./ProductDetail.css";
 import ItemCount from "../../ItemCount";
+import { CartContext } from "../../../context/CartContext";
 
 function ProductDetail(props) {
-    //const [prodAdded, setProdAdded] = useState({});
-    /*const [cantProducts, setCantProducts] = useState(1);
-     */
+    const [cantProducts, setCantProducts] = useState(1);
+
+    const { addToCart, isInCart } = useContext(CartContext);
 
     const navigateFn = useNavigate();
 
@@ -16,16 +17,12 @@ function ProductDetail(props) {
         navigateFn(`/Products`);
     }
 
-    /*
-    function handleUpdateCount() {
-        //props.onUpdateCount();
-        console.log("CANTIDAD AGREGADA: ", props.onUpdateCount());
-    }
-    */
-
     function addCartProducts() {
-        /*Acá se van a ir agregando los productos */
-        //console.log("PRODUCTO: ", prodAdded);
+        debugger;
+        /*** Acá se van a ir agregando los productos ***/
+        const prodAdded = { ...props, Cantidad: cantProducts };
+        console.log("PRODUCTO: ", prodAdded);
+        addToCart(prodAdded);
 
         /** Preguntar si se finaliza la compra o si continúa  **/
         qstContinueBuy();
@@ -126,7 +123,7 @@ function ProductDetail(props) {
 
                 <div className="itemCountDetailContainer">
                     <ItemCount
-                        //onUpdateCount={handleUpdateCount()}
+                        //onUpdateCount={setCantProducts()}
                         cantInitial={1}
                     />
                 </div>

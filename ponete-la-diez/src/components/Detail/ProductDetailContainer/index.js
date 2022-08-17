@@ -1,7 +1,7 @@
 /*** 
 Componente que funciona como contenedor del sitio en donde se van a mostrar los detalles de cada producto seleccionado.
  ***/
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import ProductDetail from "../ProductDetail";
 import Products from "../../../products_Definition.json";
@@ -24,6 +24,8 @@ Estructura del carrito (Es un objeto con un antributo de id, y el objeto que con
 export default function ProductDetailContainer() {
     const [prod, setProd] = useState([]);
 
+    //Este parámetro es el id del producto sobre el que quiero
+    //saber los detalles
     const { idProdu } = useParams();
 
     /*

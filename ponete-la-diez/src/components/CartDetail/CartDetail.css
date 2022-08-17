@@ -1,0 +1,59 @@
+.CartDetailContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    min-height: 500px;
+    margin-bottom: 20px;
+    /*border: 1px solid red;*/
+}
+
+/*La parte del detalle*/
+.detailContainer {
+    width: 60%;
+    border: 2px solid var(--secondaryColor); /*Verde*/
+    box-shadow: 4px 4px 8px #888888;
+    border-bottom: 0;
+    border-right: 0;
+    border-radius: 6px;
+}
+
+.itemDetails {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    color: #000000;
+}
+
+/*La parte donde se va viendo el subtotal de la compra*/
+.OrderSummaryContainer {
+    width: 30%;
+    border: 2px solid var(--secondaryColor); /*Verde*/
+    box-shadow: 4px 4px 8px #888888;
+    border-bottom: 0;
+    border-right: 0;
+    border-radius: 6px;
+}
+
+.OrderContainer {
+    height: 80%;
+}
+
+.btnBuyContainer {
+    height: 20%;
+}
+.btnBuy {
+    font-size: 18px;
+    padding: 10px 26px;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-top: 30px;
+    background-color: var(--primaryColor);
+    color: #ffffff;
+    box-shadow: 4px 4px 8px #888888;
+}
+.btnBuy:hover {
+    background-color: var(--secondaryColor);
+}

@@ -1,7 +1,10 @@
+import CartDetail from "../components/CartDetail";
+
 export default function Cart() {
     return (
         <div>
-            <h2>Soy un carrito de compras</h2>
+            <h1>Detalle de Compra</h1>;
+            <CartDetail />
         </div>
     );
 }

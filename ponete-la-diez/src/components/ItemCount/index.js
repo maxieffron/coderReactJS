@@ -12,6 +12,12 @@ export default function ItemCount(props) {
     //En useState inicializo el valor de cantProducts
     const [cantProducts, setCantProducts] = useState(props.cantInitial);
 
+    /*
+    useEffect(() => {
+        props.onUpdateCount(cantProducts);
+    }, [cantProducts]);
+    */
+
     function addProduct() {
         if (cantProducts >= props.stock) {
             swal.fire({

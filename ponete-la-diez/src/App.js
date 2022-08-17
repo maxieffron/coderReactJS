@@ -14,28 +14,31 @@ import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
 //import ProductDetailFound from "./pages/Details";
 import ProductDetailContainer from "./components/Detail/ProductDetailContainer";
+//Importamos el CartContext
+import CartCustomContext from "./context/CartContext";
 
 function App() {
-    //Invocamos el componente "NavBar"
     return (
-        <BrowserRouter>
-            <div className="App">
-                <NavBar />
+        <CartCustomContext>
+            <BrowserRouter>
+                <div className="App">
+                    <NavBar />
 
-                <Routes>
-                    <Route path="/Home" element={<Home />} />
-                    <Route path="/AboutUs" element={<AboutUs />} />
-                    <Route path="/Products" element={<Products />} />
-                    <Route
-                        path="/details/:idProdu"
-                        element={<ProductDetailContainer />}
-                    />
-                    <Route path="/Faq" element={<Faq />} />
-                    <Route path="/Contact" element={<Contact />} />
-                    <Route path="/Cart" element={<Cart />} />
-                </Routes>
-            </div>
-        </BrowserRouter>
+                    <Routes>
+                        <Route path="/Home" element={<Home />} />
+                        <Route path="/AboutUs" element={<AboutUs />} />
+                        <Route path="/Products" element={<Products />} />
+                        <Route
+                            path="/details/:idProdu"
+                            element={<ProductDetailContainer />}
+                        />
+                        <Route path="/Faq" element={<Faq />} />
+                        <Route path="/Contact" element={<Contact />} />
+                        <Route path="/Cart" element={<Cart />} />
+                    </Routes>
+                </div>
+            </BrowserRouter>
+        </CartCustomContext>
     );
 }
 
