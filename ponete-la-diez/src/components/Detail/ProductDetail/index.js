@@ -8,7 +8,7 @@ import { CartContext } from "../../../context/CartContext";
 function ProductDetail(props) {
     const [cantProducts, setCantProducts] = useState(1);
 
-    const { addToCart, isInCart } = useContext(CartContext);
+    const { addToCart } = useContext(CartContext);
 
     const navigateFn = useNavigate();
 
@@ -20,7 +20,7 @@ function ProductDetail(props) {
     function addCartProducts() {
         debugger;
         /*** Acá se van a ir agregando los productos ***/
-        const prodAdded = { ...props, Cantidad: cantProducts };
+        const prodAdded = { ...props, cantidad: cantProducts };
         console.log("PRODUCTO: ", prodAdded);
         addToCart(prodAdded);
 
@@ -123,7 +123,7 @@ function ProductDetail(props) {
 
                 <div className="itemCountDetailContainer">
                     <ItemCount
-                        //onUpdateCount={setCantProducts()}
+                        onUpdateCount={setCantProducts}
                         cantInitial={1}
                     />
                 </div>

@@ -5,6 +5,7 @@
     justify-content: space-evenly;
     width: 100%;
     min-height: 500px;
+    margin-top: 30px;
     margin-bottom: 20px;
     /*border: 1px solid red;*/
 }
@@ -19,15 +20,66 @@
     border-radius: 6px;
 }
 
-.itemDetails {
+.itemDetailsHeader {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     color: #000000;
+    padding-top: 10px;
+    border-bottom: 1px solid;
+    border-bottom-color: #888888;
 }
 
-/*La parte donde se va viendo el subtotal de la compra*/
+.itemDetailsHeader h4 {
+    width: 25%;
+}
+
+.itemDetailsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 100px;
+    justify-content: space-evenly;
+    padding-top: 10px;
+    border-bottom: 1px solid;
+    border-bottom-color: #888888;
+}
+
+.itemDetails {
+    width: 25%;
+    height: auto;
+    /*border: 1px solid blue;*/
+}
+
+.itemDetails h5 {
+    /*display: inline-block;*/
+    color: var(--primaryColor); /*Azul*/
+    margin-top: 20%;
+}
+
+.itemDetails > .name-product {
+    margin-top: 0;
+}
+
+/*Imágen del producto*/
+.itemImage {
+    width: 50%;
+    height: auto;
+}
+
+/* Botón "Quitar Producto" */
+.buttonDelete {
+    padding: 6px;
+    margin: 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    background-color: var(--secondaryColor); /*Verde*/
+    color: #ffffff;
+}
+
+/*** La parte donde se va viendo el subtotal de la compra ***/
 .OrderSummaryContainer {
     width: 30%;
     border: 2px solid var(--secondaryColor); /*Verde*/
@@ -38,19 +90,43 @@
 }
 
 .OrderContainer {
-    height: 80%;
+    height: 75%;
 }
 
 .btnBuyContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
     height: 20%;
 }
+
+/*Quitar todos los productos*/
+.btnClear {
+    width: 35%;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    color: #ffffff;
+    background-color: var(--primaryColor); /*Azul*/
+    box-shadow: 4px 4px 8px #888888;
+}
+.btnClear:hover {
+    background-color: var(--secondaryColor);
+}
+
+/*Finalizar la compra*/
 .btnBuy {
-    font-size: 18px;
-    padding: 10px 26px;
+    width: 35%;
+    height: 40px;
+    font-size: 16px;
+    /*padding: 10px 26px;*/
     border-radius: 6px;
     font-weight: 600;
-    margin-top: 30px;
-    background-color: var(--primaryColor);
+    /*margin-top: 30px;*/
+    background-color: var(--primaryColor); /*Azul*/
     color: #ffffff;
     box-shadow: 4px 4px 8px #888888;
 }
