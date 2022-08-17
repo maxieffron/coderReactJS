@@ -13,7 +13,7 @@ import Faq from "./pages/Faq";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
 //import ProductDetailFound from "./pages/Details";
-import ProductDetailContainer from "./components/ProductDetailContainer";
+import ProductDetailContainer from "./components/Detail/ProductDetailContainer";
 
 function App() {
     //Invocamos el componente "NavBar"

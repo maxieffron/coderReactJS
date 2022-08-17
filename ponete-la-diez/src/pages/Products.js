@@ -1,4 +1,4 @@
-import ItemListContainer from "../components/ItemListContainer";
+import ItemListContainer from "../components/List/ItemListContainer";
 
 export default function Products(props) {
     return (

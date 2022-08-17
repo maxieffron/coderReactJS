@@ -1,10 +1,10 @@
 /*Container de TODO EL PRODUCTO*/
 .ProductContainer {
     width: 100%;
-    height: 90%;
+    /*height: 90%;*/
     /*border: 2px solid var(--secondaryColor); /*Verde*/
-    border-top: 2px solid var(--secondaryColor); /*Verde*/
-    border-left: 2px solid var(--secondaryColor); /*Verde*/
+    /*border-top: 2px solid var(--secondaryColor); /*Verde*/
+    /*border-left: 2px solid var(--secondaryColor); /*Verde*/
 
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
@@ -13,7 +13,7 @@
 /*Container de la imágen y el botón de comprar*/
 .product-Cont-img {
     width: 90%;
-    height: 75%;
+    height: 65%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -51,7 +51,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    height: 25%;
+    height: 35%;
     border-top: 2px solid var(--secondaryColor); /*Verde*/
 }
 

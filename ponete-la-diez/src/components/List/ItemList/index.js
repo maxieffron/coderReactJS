@@ -6,7 +6,7 @@ Componente que contiene la lista de productos. El mismo se compone de:
 
 import "./ItemList.css";
 /*import "../../index.css";*/
-import ItemCount from "../ItemCount";
+//import ItemCount from "../../ItemCount";
 import Item from "../Item";
 
 export default function ItemList(props) {
@@ -20,12 +20,14 @@ export default function ItemList(props) {
                     return (
                         <div className="dataProduct-container">
                             <Item key={data.idProducto} dataProduct={data} />
+                            {/*
                             <ItemCount
                                 key={data.idProducto}
                                 id={data.idProducto}
                                 cantInitial={1}
                                 stock={data.stock}
                             />
+                            */}
                         </div>
                     );
                 })

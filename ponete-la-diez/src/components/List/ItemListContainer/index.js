@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 /*import "../../index.css";*/
 import "./ItemListContainer.css";
 import ItemList from "../ItemList";
-import Products from "../../products_Definition.json";
+import Products from "../../../products_Definition.json";
 
 function ItemListContainer(props) {
     const [prod, setProduct] = useState([]);

@@ -30,8 +30,8 @@ function Item(props) {
                     alt={props.dataProduct.nombre}
                 ></img>
 
-                {/*Esta imágen en un futuro utilizará para añair el producto al carrito*/}
-                <div className="img-Prod-BuyButton"></div>
+                {/*Esta imágen en un futuro utilizará para añair el producto al carrito
+                <div className="img-Prod-BuyButton"></div>*/}
             </div>
 
             <div className="product-description">

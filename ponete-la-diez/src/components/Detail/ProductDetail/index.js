@@ -2,7 +2,7 @@
 import { useNavigate } from "react-router-dom";
 import swal from "sweetalert2";
 import "./ProductDetail.css";
-import ItemCount from "../ItemCount";
+import ItemCount from "../../ItemCount";
 
 function ProductDetail(props) {
     //const [prodAdded, setProdAdded] = useState({});

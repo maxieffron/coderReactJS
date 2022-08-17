@@ -18,7 +18,10 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     margin: 40px 10px;
-    width: 30%;
-    min-height: 500px;
+    width: 25%; /*30%;*/
+    /*min-height: 500px;*/
+    border-radius: 6px;
+    border-top: 2px solid var(--secondaryColor); /*Verde*/
+    border-left: 2px solid var(--secondaryColor); /*Verde*/
     box-shadow: 6px 6px 8px #888888;
 }

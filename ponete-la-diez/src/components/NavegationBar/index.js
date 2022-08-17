@@ -7,7 +7,7 @@ LogoWidget: Logo de la marca.
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import LogoWidget from "../LogoWidget";
+import LogoWidget from "./LogoWidget";
 import CartWidget from "../CartWidget";
 import { Link } from "react-router-dom";
 /*import "../../index.css";*/

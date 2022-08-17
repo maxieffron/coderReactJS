@@ -4,7 +4,7 @@ Componente que funciona como contenedor del sitio en donde se van a mostrar los 
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ProductDetail from "../ProductDetail";
-import Products from "../../products_Definition.json";
+import Products from "../../../products_Definition.json";
 import "./ProductDetailContainer.css";
 
 /*

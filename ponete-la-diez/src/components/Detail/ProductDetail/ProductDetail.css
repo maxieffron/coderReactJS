@@ -16,6 +16,7 @@
     border: 2px solid var(--secondaryColor); /*Verde*/
     box-shadow: 4px 4px 8px #888888;
     border-bottom: 0;
+    border-radius: 6px;
 }
 
 /*
@@ -79,6 +80,7 @@
     /*margin-bottom: 20px;*/
     box-shadow: 4px 4px 8px #888888;
     border: 2px solid var(--primaryColor); /*Verde*/
+    border-radius: 6px;
 }
 
 .Detail-img {
