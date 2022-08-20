@@ -2,6 +2,272 @@
     "productos": [
         {
             "idProducto": 1,
+            "nombre": "Agentina Titular",
+            "equipo": "Agentina",
+            "categoria": "Primera División",
+            "pais": "Argentina",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "stock": 6000,
+            "precio": 10000,
+            "descuento": 20,
+            "imagenAnverso": "../images/products/Primera División/Argentina-F.png",
+            "imagenReverso": "../images/products/Primera División/Argentina-R.png"
+        },
+        {
+            "idProducto": 2,
+            "nombre": "River Plate Titular",
+            "equipo": "River Plate",
+            "categoria": "Primera División",
+            "pais": "Argentina",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "stock": 6000,
+            "precio": 9500,
+            "descuento": 0,
+            "imagenAnverso": "../images/products/Primera División/River-F.png",
+            "imagenReverso": "../images/products/Primera División/River-R.png"
+        },
+        {
+            "idProducto": 3,
+            "nombre": "Boca Juniors Titular",
+            "equipo": "Boca Juniors",
+            "categoria": "Primera División",
+            "pais": "Argentina",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "stock": 6000,
+            "precio": 9500,
+            "descuento": 0,
+            "imagenAnverso": "../images/products/Primera División/Boca-F.png",
+            "imagenReverso": "../images/products/Primera División/Boca-R.png"
+        },
+        {
+            "idProducto": 4,
+            "nombre": "Independiente Titular",
+            "equipo": "Independiente",
+            "categoria": "Primera División",
+            "pais": "Argentina",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "stock": 4300,
+            "precio": 8500,
+            "descuento": 0,
+            "imagenAnverso": "../images/products/Primera División/Independiente-F.png",
+            "imagenReverso": "../images/products/Primera División/Independiente-R.png"
+        },
+        {
+            "idProducto": 5,
+            "nombre": "Racing Club Titular",
+            "equipo": "Racing Club",
+            "categoria": "Primera División",
+            "pais": "Argentina",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "stock": 4300,
+            "precio": 8500,
+            "descuento": 0,
+            "imagenAnverso": "../images/products/Primera División/Racing-F.png",
+            "imagenReverso": "../images/products/Primera División/Racing-R.png"
+        },
+        {
+            "idProducto": 6,
+            "nombre": "San Lorenzo Titular",
+            "equipo": "San Lorenzo",
+            "categoria": "Primera División",
+            "pais": "Argentina",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "stock": 5300,
+            "precio": 8000,
+            "descuento": 0,
+            "imagenAnverso": "../images/products/Primera División/San Lorenzo-F.png",
+            "imagenReverso": "../images/products/Primera División/San Lorenzo-R.png"
+        },
+        {
+            "idProducto": 7,
+            "nombre": "Huracán Titular",
+            "equipo": "Huracán",
+            "categoria": "Primera División",
+            "pais": "Argentina",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "stock": 4300,
+            "precio": 8000,
+            "descuento": 0,
+            "imagenAnverso": "../images/products/Primera División/Huracan-F.png",
+            "imagenReverso": "../images/products/Primera División/Huracan-R.png"
+        },
+        {
+            "idProducto": 8,
+            "nombre": "Vélez Sarsfield Titular",
+            "equipo": "Vélez Sarsfield",
+            "categoria": "Primera División",
+            "pais": "Argentina",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "stock": 4300,
+            "precio": 8000,
+            "descuento": 0,
+            "imagenAnverso": "../images/products/Primera División/Velez-F.png",
+            "imagenReverso": "../images/products/Primera División/Velez-R.png"
+        },
+        {
+            "idProducto": 9,
+            "nombre": "Agentinos Juniors Titular",
+            "equipo": "Agentinos Juniors",
+            "categoria": "Primera División",
+            "pais": "Argentina",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "stock": 1000,
+            "precio": 4500,
+            "descuento": 0,
+            "imagenAnverso": "../images/products/Primera División/Argentinos Jrs-F.png",
+            "imagenReverso": "../images/products/Primera División/Argentinos Jrs-F.png"
+        },
+        {
+            "idProducto": 10,
+            "nombre": "Estudiantes de La Plata Titular",
+            "equipo": "Estudiantes de La Plata",
+            "categoria": "Primera División",
+            "pais": "Argentina",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "stock": 3000,
+            "precio": 6900,
+            "descuento": 10,
+            "imagenAnverso": "../images/products/Primera División/Estudiantes-F.png",
+            "imagenReverso": "../images/products/Primera División/Estudiantes-F.png"
+        },
+        {
+            "idProducto": 11,
+            "nombre": "Gimnasia y Esgrima de La Plata Titular",
+            "equipo": "Gimnasia y Esgrima de La Plata",
+            "categoria": "Primera División",
+            "pais": "Argentina",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "stock": 2500,
+            "precio": 6000,
+            "descuento": 10,
+            "imagenAnverso": "../images/products/Primera División/Gimnasia-F.png",
+            "imagenReverso": "../images/products/Primera División/Gimnasia-F.png"
+        },
+        {
+            "idProducto": 12,
+            "nombre": "Newells Old Boys Titular",
+            "equipo": "Newells Old Boys",
+            "categoria": "Primera División",
+            "pais": "Argentina",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "stock": 4000,
+            "precio": 8000,
+            "descuento": 0,
+            "imagenAnverso": "../images/products/Primera División/Newells-F.png",
+            "imagenReverso": "../images/products/Primera División/Newells-R.png"
+        },
+        {
+            "idProducto": 13,
+            "nombre": "Rosario Central Titular",
+            "equipo": "Rosario Central",
+            "categoria": "Primera División",
+            "pais": "Argentina",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "stock": 4000,
+            "precio": 8000,
+            "descuento": 0,
+            "imagenAnverso": "../images/products/Primera División/Central-F.png",
+            "imagenReverso": "../images/products/Primera División/Central-R.png"
+        },
+        {
+            "idProducto": 14,
+            "nombre": "Tigre Titular",
+            "equipo": "Tigre",
+            "categoria": "Primera División",
+            "pais": "Argentina",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "stock": 4000,
+            "precio": 6700,
+            "descuento": 20,
+            "imagenAnverso": "../images/products/Primera División/Tigre-F.png",
+            "imagenReverso": "../images/products/Primera División/Tigre-F.png"
+        },
+        {
+            "idProducto": 15,
             "nombre": "Almagro Titular",
             "equipo": "Almagro",
             "categoria": "Ascenso",
@@ -20,7 +286,7 @@
             "imagenReverso": "../images/products/Ascenso/Almagro - Reverso.png"
         },
         {
-            "idProducto": 2,
+            "idProducto": 16,
             "nombre": "Almirante Brown Titular",
             "equipo": "Almirante Brown",
             "categoria": "Ascenso",
@@ -39,7 +305,7 @@
             "imagenReverso": "../images/products/Ascenso/Almirante Brown - Reverso.png"
         },
         {
-            "idProducto": 3,
+            "idProducto": 17,
             "nombre": "Atlanta Suplente",
             "equipo": "Atlanta",
             "categoria": "Ascenso",
@@ -58,7 +324,7 @@
             "imagenReverso": "../images/products/Ascenso/Atlanta - Reverso.png"
         },
         {
-            "idProducto": 4,
+            "idProducto": 18,
             "nombre": "Berazategui Titular",
             "equipo": "Berazategui",
             "categoria": "Ascenso",
@@ -77,7 +343,7 @@
             "imagenReverso": "../images/products/Ascenso/Berazategui - Reverso.png"
         },
         {
-            "idProducto": 5,
+            "idProducto": 19,
             "nombre": "Brown de Adrogué Titular",
             "equipo": "Brown de Adrogué",
             "categoria": "Ascenso",
@@ -96,7 +362,7 @@
             "imagenReverso": "../images/products/Ascenso/Brown Adrogue - Reverso.png"
         },
         {
-            "idProducto": 6,
+            "idProducto": 20,
             "nombre": "Chacarita Suplente",
             "equipo": "Chacarita",
             "categoria": "Ascenso",
@@ -115,7 +381,7 @@
             "imagenReverso": "../images/products/Ascenso/Chacarita - Reverso.png"
         },
         {
-            "idProducto": 7,
+            "idProducto": 21,
             "nombre": "Deportivo Español Titular",
             "equipo": "Deportivo Español",
             "categoria": "Ascenso",
@@ -134,7 +400,7 @@
             "imagenReverso": "../images/products/Ascenso/Dep. Español - Reverso.png"
         },
         {
-            "idProducto": 8,
+            "idProducto": 22,
             "nombre": "Ferro Titular",
             "equipo": "Ferrocarril Oeste",
             "categoria": "Ascenso",
@@ -153,7 +419,7 @@
             "imagenReverso": "../images/products/Ascenso/Ferro - Reverso.png"
         },
         {
-            "idProducto": 9,
+            "idProducto": 23,
             "nombre": "Racing de Córdoba Titular",
             "equipo": "Racing de Córdoba",
             "categoria": "Ascenso",
@@ -172,7 +438,7 @@
             "imagenReverso": "../images/products/Ascenso/Racing de Cordoba - Reverso.png"
         },
         {
-            "idProducto": 10,
+            "idProducto": 24,
             "nombre": "San Miguel Titular",
             "equipo": "San Miguel",
             "categoria": "Ascenso",
@@ -189,6 +455,177 @@
             "descuento": 0,
             "imagenAnverso": "../images/products/Ascenso/San Miguel - Frente.png",
             "imagenReverso": "../images/products/Ascenso/San Miguel - Reverso.png"
+        },
+        {
+            "idProducto": 25,
+            "nombre": "Arsenal Titular 2022-2023",
+            "equipo": "Arsenal",
+            "categoria": "Premier League",
+            "pais": "Inglaterra",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "stock": 500,
+            "precio": 6000,
+            "descuento": 10,
+            "imagenAnverso": "../images/products/Premier/Arsenal - 2022-2023 - Frente.png",
+            "imagenReverso": "../images/products/Premier/Arsenal - 2022-2023 - Reverso.png"
+        },
+        {
+            "idProducto": 26,
+            "nombre": "Chelsea Titular 2022-2023",
+            "equipo": "Chelsea",
+            "categoria": "Premier League",
+            "pais": "Inglaterra",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "stock": 500,
+            "precio": 6500,
+            "descuento": 0,
+            "imagenAnverso": "../images/products/Premier/Chelsea - 2022-2023 - Frente.png",
+            "imagenReverso": "../images/products/Premier/Chelsea - 2022-2023 - Reverso.png"
+        },
+        {
+            "idProducto": 27,
+            "nombre": "Liverpool Titular 2022-2023",
+            "equipo": "Liverpool",
+            "categoria": "Premier League",
+            "pais": "Inglaterra",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "stock": 100,
+            "precio": 7000,
+            "descuento": 15,
+            "imagenAnverso": "../images/products/Premier/Liverpool 2022-2023 - Titular Frente.png",
+            "imagenReverso": "../images/products/Premier/Liverpool 2022-2023 - Titular Reverso.png"
+        },
+        {
+            "idProducto": 28,
+            "nombre": "Liverpool Suplente 2022-2023",
+            "equipo": "Liverpool",
+            "categoria": "Premier League",
+            "pais": "Inglaterra",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "stock": 300,
+            "precio": 7200,
+            "descuento": 0,
+            "imagenAnverso": "../images/products/Premier/Liverpool 2022-2023 - Suplente Frente.png",
+            "imagenReverso": "../images/products/Premier/Liverpool 2022-2023 - Suplente Reverso.png"
+        },
+        {
+            "idProducto": 29,
+            "nombre": "Manchester City Titular 2022-2023",
+            "equipo": "Manchester City",
+            "categoria": "Premier League",
+            "pais": "Inglaterra",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "stock": 2600,
+            "precio": 9000,
+            "descuento": 0,
+            "imagenAnverso": "../images/products/Premier/Manchester City - 2022-2023 - Frente.png",
+            "imagenReverso": "../images/products/Premier/Manchester City - 2022-2023 - Reverso.png"
+        },
+        {
+            "idProducto": 30,
+            "nombre": "Manchester United Titular 2022-2023",
+            "equipo": "Manchester United",
+            "categoria": "Premier League",
+            "pais": "Inglaterra",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "stock": 4700,
+            "precio": 8000,
+            "descuento": 10,
+            "imagenAnverso": "../images/products/Premier/Manchester United - 2022-2023 - Frente.png",
+            "imagenReverso": "../images/products/Premier/Manchester United - 2022-2023 - Reverso.png"
+        },
+        {
+            "idProducto": 31,
+            "nombre": "Tottenham Titular 2022-2023",
+            "equipo": "Tottenham",
+            "categoria": "Premier League",
+            "pais": "Inglaterra",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "stock": 4200,
+            "precio": 7000,
+            "descuento": 0,
+            "imagenAnverso": "../images/products/Premier/Tottenham - 2022-2023 - Frente.png",
+            "imagenReverso": "../images/products/Premier/Tottenham - 2022-2023 - Reverso.png"
+        },
+        {
+            "idProducto": 32,
+            "nombre": "Leeds United Suplente 2022-2023",
+            "equipo": "Leeds United",
+            "categoria": "Premier League",
+            "pais": "Inglaterra",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "stock": 4000,
+            "precio": 8000,
+            "descuento": 10,
+            "imagenAnverso": "../images/products/Premier/Leeds - 2022-2023 - Suplente Frente.png",
+            "imagenReverso": "../images/products/Premier/Leeds - 2022-2023 - Suplente Frente.png"
+        },
+        {
+            "idProducto": 33,
+            "nombre": "NewCastle Titular 2022-2023",
+            "equipo": "NewCastle",
+            "categoria": "Premier League",
+            "pais": "Inglaterra",
+            "talles": [
+                { "talle": "XS", "stock": 1000 },
+                { "talle": "S", "stock": 1000 },
+                { "talle": "M", "stock": 1500 },
+                { "talle": "L", "stock": 1500 },
+                { "talle": "XL", "stock": 800 }
+            ],
+            "stock": 3000,
+            "precio": 7100,
+            "descuento": 0,
+            "imagenAnverso": "../images/products/Premier/NewCastle - 2022-2023 - Frente.png",
+            "imagenReverso": "../images/products/Premier/NewCastle - 2022-2023 - Frente.png"
         }
     ]
 }

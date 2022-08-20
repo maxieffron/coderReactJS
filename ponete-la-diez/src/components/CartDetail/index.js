@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 //Importamos el hook "useContext" para poder acceder al contenido
 //del "CartContext"
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 //Importamos el css de este componente
 import "./CartDetail.css";
 
@@ -19,6 +19,23 @@ function CartDetail() {
     const { cart, removeFromCart, removeAll } = useContext(CartContext);
 
     const navigateFn = useNavigate();
+
+    //Para validar si hay productos o no en el carrito. En base a eso, habilitamos
+    //o deshabilitamos los botones de "Borrar Todo" o "Finalizar Compra"
+    useEffect(() => {
+        const btClear = document.querySelector(".btnClear");
+        const btBuy = document.querySelector(".btnBuy");
+
+        if (cart.length === 0) {
+            btClear.disabled = true;
+            btBuy.disabled = true;
+            btBuy.setAttribute("style", "background-color:#c4c4c4;");
+            btClear.setAttribute("style", "background-color:#c4c4c4;");
+        } else {
+            btClear.disabled = false;
+            btBuy.disabled = false;
+        }
+    });
 
     const cleanCart = () => {
         swal.fire({
@@ -133,7 +150,7 @@ function CartDetail() {
                         Borrar Todo
                     </button>
                     <button onClick={endBuy} className="btnBuy">
-                        Comprar
+                        Finalizar Compra
                     </button>
                 </div>
             </div>
