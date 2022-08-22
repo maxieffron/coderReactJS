@@ -95,6 +95,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     height: 75%;
+    background-color: bisque;
     /*border: 1px solid red;*/
 }
 
@@ -122,6 +123,7 @@
     margin-left: 20px;
     text-align: center;
     border-radius: 6px;
+    border-style: solid;
 }
 
 .postalCodeContainer > button {
@@ -131,8 +133,13 @@
     margin-right: 20px;
     border-radius: 6px;
     color: #ffffff;
-    background-color: var(--primaryColor); /*Azul*/
+    background-color: var(--secondaryColor); /*Azul*/
     box-shadow: 4px 4px 8px #888888;
+}
+
+.postalCodeContainer > button:hover,
+.DiscountContainer > button:hover {
+    font-weight: 600;
 }
 /*------------------------------------------------------------*/
 
@@ -164,7 +171,7 @@
     margin-right: 20px;
     border-radius: 6px;
     color: #ffffff;
-    background-color: var(--primaryColor); /*Azul*/
+    background-color: var(--secondaryColor); /*Azul*/
     box-shadow: 4px 4px 8px #888888;
 }
 /*------------------------------------------------------------*/

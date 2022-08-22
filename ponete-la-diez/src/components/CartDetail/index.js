@@ -41,9 +41,6 @@ function CartDetail() {
     //Con esto actualizamos el importe total de la compra DENTRO DE LA PANTALLA DETALLE
     useEffect(() => {
         const imp = (totalPrice() / 100) * discount;
-        debugger;
-        console.log(imp);
-
         //Subtotal
         setSubTotal(totalPrice);
         //Total
@@ -55,12 +52,16 @@ function CartDetail() {
     useEffect(() => {
         const btClear = document.querySelector(".btnClear");
         const btBuy = document.querySelector(".btnBuy");
+        const btDiscount = document.getElementById("btnDiscount");
 
         if (cart.length === 0) {
             btClear.disabled = true;
             btBuy.disabled = true;
             btBuy.setAttribute("style", "background-color:#c4c4c4;");
             btClear.setAttribute("style", "background-color:#c4c4c4;");
+            //Una vez que aplicamos el descuento, bloqueamos el botón
+            btDiscount.setAttribute("style", "background-color:#c4c4c4;");
+            btDiscount.disabled = true;
         } else {
             btClear.disabled = false;
             btBuy.disabled = false;
@@ -72,42 +73,67 @@ function CartDetail() {
         let cupon = document.getElementById("cuponDiscount").value;
         const btDiscount = document.getElementById("btnDiscount");
 
-        debugger;
-        cupon = cupon.toUpperCase();
-        cupon = cupon.substr(0, 1);
+        if (cupon.length < 6) {
+            swal.fire({
+                title: "El código ingresado no es válido.",
+                text: "El cupón a ingresar debe contar con 6 caracteres.",
+                icon: "error",
+                showConfirmButton: true,
+            });
+        } else {
+            cupon = cupon.toUpperCase();
+            cupon = cupon.substr(0, 1);
 
-        switch (cupon) {
-            case ("A", "C", "D", "E", "F"):
-                setDiscount(10);
-                break;
+            switch (cupon) {
+                case "A" || "C" || "D" || "E" || "F":
+                    setDiscount(10);
+                    break;
 
-            case ("G", "H", "I", "J", "L"):
-                setDiscount(15);
-                break;
+                case "G" || "H" || "I" || "J" || "L":
+                    setDiscount(15);
+                    break;
 
-            case ("M", "N", "P", "Q", "R"):
-                setDiscount(20);
-                break;
-            case ("S", "T", "U", "V", "X"):
-                setDiscount(5);
-                break;
-            default:
-                swal.fire({
-                    title: "Lo siento. Este cupón ya ha expirado.",
-                    icon: "error",
-                    showConfirmButton: false,
-                    timer: 2000,
-                });
-                setDiscount(10);
-                break;
+                case "M" || "N" || "P" || "Q" || "R":
+                    setDiscount(20);
+                    break;
+                case "S" || "T" || "U" || "V" || "X":
+                    setDiscount(5);
+                    break;
+                default:
+                    swal.fire({
+                        title: "Lo siento. Este cupón ya ha expirado.",
+                        icon: "error",
+                        showConfirmButton: false,
+                        timer: 2000,
+                    });
+                    setDiscount(0);
+                    break;
+            }
+
+            //Una vez que aplicamos el descuento, bloqueamos el botón
+            btDiscount.setAttribute("style", "background-color:#c4c4c4;");
+            btDiscount.disabled = true;
+            //cupon.setAttribute("style", "background-color:#c4c4c4;");
+            //cupon.disabled = true;
         }
-
-        //Una vez que aplicamos el descuento, bloqueamos el botón
-        btDiscount.setAttribute("style", "background-color:#c4c4c4;");
-        btDiscount.disabled = true;
-        //cupon.setAttribute("style", "background-color:#c4c4c4;");
-        //cupon.disabled = true;
     };
+
+    function ValidateInputCupon() {
+        let cupon = document.getElementById("cuponDiscount").value;
+        let cuponInput = document.getElementById("cuponDiscount");
+        const re = new RegExp("^[a-zA-Z]+$");
+        debugger;
+
+        cupon = cupon.toUpperCase();
+        console.log(cupon);
+        if (re.test(cupon)) {
+            console.log("Todo OK");
+        } else {
+            cupon = cupon.substr(0, cupon.length - 1);
+            console.log(cupon);
+            cuponInput.value = cupon;
+        }
+    }
 
     const cleanCart = () => {
         swal.fire({
@@ -188,15 +214,15 @@ function CartDetail() {
                                     <h5>{item.cantidad}</h5>
                                 </div>
                                 <div className="itemDetails">
-                                    <h5>{`$${parseInt(item.precio).toFixed(
-                                        2
-                                    )}`}</h5>
+                                    <h5>{`$${parseInt(
+                                        item.precio
+                                    ).toLocaleString("en")}`}</h5>
                                 </div>
                                 <div className="itemDetails">
                                     <h5>
                                         {`$${parseInt(
                                             item.cantidad * item.precio
-                                        ).toFixed(2)}`}
+                                        ).toLocaleString("en")}`}
                                     </h5>
                                     <button
                                         onClick={() =>
@@ -220,23 +246,34 @@ function CartDetail() {
                     </div>
                     <div className="postalCodeContainer">
                         <input
+                            tabIndex="1"
                             type="text"
                             placeholder="Ingrese Código Postal"
                             maxLength={4}
                         ></input>
 
-                        <button>Calcular</button>
+                        <button tabIndex="2">Calcular</button>
                     </div>
 
                     <div className="DiscountContainer">
                         <input
+                            tabIndex="3"
                             id="cuponDiscount"
+                            name="cupon"
                             type="text"
                             placeholder="Cupón de descuento"
                             maxLength={6}
+                            title={
+                                "El cupón a ingresar debe contar con 6 caracteres"
+                            }
+                            onKeyUp={ValidateInputCupon}
                         ></input>
 
-                        <button id="btnDiscount" onClick={ApplyDiscount}>
+                        <button
+                            tabIndex="4"
+                            id="btnDiscount"
+                            onClick={ApplyDiscount}
+                        >
                             Aplicar
                         </button>
                     </div>
@@ -250,7 +287,7 @@ function CartDetail() {
                         <div className="prices">
                             <h4>Subtotal:</h4>
                             <h4>{`$${parseInt(subTotal).toLocaleString(
-                                "es"
+                                "en"
                             )}`}</h4>
                         </div>
 
@@ -264,7 +301,7 @@ function CartDetail() {
                             <h3>
                                 {" "}
                                 {`$${parseInt(totalImport).toLocaleString(
-                                    "es"
+                                    "en"
                                 )}`}
                             </h3>
                         </div>

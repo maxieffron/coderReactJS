@@ -35,6 +35,31 @@ h1 {
     text-align: center;
 }
 
+/* ------ flecha para volver arriba ------ */
+.back-to-top {
+    position: fixed;
+    display: inline;
+    width: 54px;
+    height: 54px;
+    border-radius: 26px;
+    right: 15px;
+    bottom: 30px;
+    background: var(--secondaryColor);
+    transition: display 0.5s ease-in-out;
+    z-index: 994;
+}
+
+.back-to-top > i {
+    font-size: 30px;
+    position: absolute;
+    /*top: 6px;*/
+    left: 7px;
+}
+
+.arrow-up {
+    height: 40px;
+}
+
 /*********************************
 ********** MEDIA QUERYS **********
 *********************************/

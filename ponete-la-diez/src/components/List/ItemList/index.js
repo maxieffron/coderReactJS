@@ -15,21 +15,16 @@ export default function ItemList(props) {
     const [Prodcategory, setProdCategory] = useState(props.product);
 
     useEffect(() => {
-        debugger;
-
         if (props.category === "") {
             setProdCategory(props.product);
         } else {
             setProdCategory(
-                //props.product.filter((prod) => prod.categoria === "Premier League")
                 props.product.filter(
                     (prod) => prod.categoria === props.category
                 )
             );
         }
-
-        //console.log(category);
-    }, [props.product]);
+    }, [props.product, props.category]);
 
     return (
         <div className="ItemList-Container">

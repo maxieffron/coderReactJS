@@ -40,6 +40,16 @@ function App() {
                         <Route path="/Contact" element={<Contact />} />
                         <Route path="/Cart" element={<Cart />} />
                     </Routes>
+
+                    <a href="#" className="back-to-top">
+                        <i>
+                            <img
+                                className="arrow-up"
+                                src="../images/simple-up.png"
+                                alt="Arrow"
+                            ></img>
+                        </i>
+                    </a>
                 </div>
             </BrowserRouter>
         </CartCustomContext>
