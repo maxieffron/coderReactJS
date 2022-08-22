@@ -6,10 +6,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 //import ItemListContainer from "./components/ItemListContainer";
 //import ProductDetailContainer from "./components/ProductDetailContainer";
 //Importamos las páginas
-import Home from "./pages/Home";
-import AboutUs from "./pages/AboutUs";
+import PrimeraDiv from "./pages/PrimeraDiv";
+import Ascenso from "./pages/Ascenso";
 import Products from "./pages/Products";
-import Faq from "./pages/Faq";
+import PremierLeague from "./pages/PremierLeague";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
 //import ProductDetailFound from "./pages/Details";
@@ -25,14 +25,18 @@ function App() {
                     <NavBar />
 
                     <Routes>
-                        <Route path="/Home" element={<Home />} />
-                        <Route path="/AboutUs" element={<AboutUs />} />
                         <Route path="/Products" element={<Products />} />
+                        <Route path="/PrimeraDiv" element={<PrimeraDiv />} />
+                        <Route path="/Ascenso" element={<Ascenso />} />
+
                         <Route
                             path="/details/:idProdu"
                             element={<ProductDetailContainer />}
                         />
-                        <Route path="/Faq" element={<Faq />} />
+                        <Route
+                            path="/PremierLeague"
+                            element={<PremierLeague />}
+                        />
                         <Route path="/Contact" element={<Contact />} />
                         <Route path="/Cart" element={<Cart />} />
                     </Routes>

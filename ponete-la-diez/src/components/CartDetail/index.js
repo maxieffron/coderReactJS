@@ -13,8 +13,6 @@ import { useContext, useEffect, useState } from "react";
 import "./CartDetail.css";
 
 function CartDetail() {
-    const discount = 0;
-
     /*Con esto puedo tener acceso al parámetro "cart" cuyo valor
     se encuentra en el contexto "CartContext"
     */
@@ -30,6 +28,9 @@ function CartDetail() {
     //Total de la compra
     const [totalImport, setTotalImport] = useState(totalPrice);
 
+    //Descuentos
+    const [discount, setDiscount] = useState(0);
+
     const navigateFn = useNavigate();
 
     //Con esto actualizamos la cantidad total de productos DENTRO DE LA PANTALLA DETALLE
@@ -39,9 +40,15 @@ function CartDetail() {
 
     //Con esto actualizamos el importe total de la compra DENTRO DE LA PANTALLA DETALLE
     useEffect(() => {
-        setTotalImport(totalPrice);
+        const imp = (totalPrice() / 100) * discount;
+        debugger;
+        console.log(imp);
+
+        //Subtotal
         setSubTotal(totalPrice);
-    }, [totalPrice]);
+        //Total
+        setTotalImport(totalPrice() - imp);
+    }, [totalPrice, discount]);
 
     //Para validar si hay productos o no en el carrito. En base a eso, habilitamos
     //o deshabilitamos los botones de "Borrar Todo" o "Finalizar Compra"
@@ -62,20 +69,44 @@ function CartDetail() {
 
     //Aplicar descuento
     const ApplyDiscount = () => {
-        const cupon = document.getElementById("discount");
+        let cupon = document.getElementById("cuponDiscount").value;
         const btDiscount = document.getElementById("btnDiscount");
 
-        switch (cupon.touppercase()) {
-            case 1:
+        debugger;
+        cupon = cupon.toUpperCase();
+        cupon = cupon.substr(0, 1);
+
+        switch (cupon) {
+            case ("A", "C", "D", "E", "F"):
+                setDiscount(10);
                 break;
 
+            case ("G", "H", "I", "J", "L"):
+                setDiscount(15);
+                break;
+
+            case ("M", "N", "P", "Q", "R"):
+                setDiscount(20);
+                break;
+            case ("S", "T", "U", "V", "X"):
+                setDiscount(5);
+                break;
             default:
+                swal.fire({
+                    title: "Lo siento. Este cupón ya ha expirado.",
+                    icon: "error",
+                    showConfirmButton: false,
+                    timer: 2000,
+                });
+                setDiscount(10);
                 break;
         }
 
         //Una vez que aplicamos el descuento, bloqueamos el botón
         btDiscount.setAttribute("style", "background-color:#c4c4c4;");
         btDiscount.disabled = true;
+        //cupon.setAttribute("style", "background-color:#c4c4c4;");
+        //cupon.disabled = true;
     };
 
     const cleanCart = () => {
@@ -91,6 +122,7 @@ function CartDetail() {
             if (result.isConfirmed) {
                 /*Se limpia el carrito*/
                 removeAll();
+                setDiscount(0);
             }
         });
     };
@@ -116,7 +148,7 @@ function CartDetail() {
                     setTimeout(() => {
                         /*Se llama a la navegación que nos llevará a la páginal principal del sitio y se limpia el carrito*/
                         removeAll();
-                        navigateFn(`/Home`);
+                        navigateFn(`/Products`);
                     }, 2000)
                 );
             }
@@ -198,7 +230,7 @@ function CartDetail() {
 
                     <div className="DiscountContainer">
                         <input
-                            id="discount"
+                            id="cuponDiscount"
                             type="text"
                             placeholder="Cupón de descuento"
                             maxLength={6}
@@ -222,7 +254,7 @@ function CartDetail() {
                             )}`}</h4>
                         </div>
 
-                        <div className="prices">
+                        <div id="percentDiscount" className="prices">
                             <h4>Descuento:</h4>
                             <h4>{`${discount}%`}</h4>
                         </div>

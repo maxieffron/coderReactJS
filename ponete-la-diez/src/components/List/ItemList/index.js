@@ -4,54 +4,42 @@ Componente que contiene la lista de productos. El mismo se compone de:
 - Componente ItemCount
  ***/
 
-import { useState, useEffect } from "react";
+//import { useState, useEffect } from "react";
 import "./ItemList.css";
+import { useEffect, useState } from "react";
 /*import "../../index.css";*/
 //import ItemCount from "../../ItemCount";
 import Item from "../Item";
 
 export default function ItemList(props) {
-    const [optCategory, setOptCategory] = useState();
-
-    /*
-    const changeCategory = () => {
-        //setOptCategory("Todas");
-        const category = document.getElementById("idCategory");
-
-        //debugger;
-        //const catSelected = category.options[category.selectedIndex].value;
-        //setOptCategory(catSelected);
-        //alert(catSelected);
-        
-    };
-    */
+    const [Prodcategory, setProdCategory] = useState(props.product);
 
     useEffect(() => {
-        setOptCategory(optCategory);
-    }, [optCategory]);
+        debugger;
+
+        if (props.category === "") {
+            setProdCategory(props.product);
+        } else {
+            setProdCategory(
+                //props.product.filter((prod) => prod.categoria === "Premier League")
+                props.product.filter(
+                    (prod) => prod.categoria === props.category
+                )
+            );
+        }
+
+        //console.log(category);
+    }, [props.product]);
 
     return (
         <div className="ItemList-Container">
             {
-                /*
-            <div className="ItemList-Cat-Container">
-                <h3>Categorías</h3>
-                <select id="idCategory" onChange={changeCategory()}>
-                    <option value="Todas" selected>
-                        Todas
-                    </option>
-                    <option value="Primera División">Primera División</option>
-                    <option value="Ascenso">Ascenso</option>
-                    <option value="Premier League">Premier League</option>
-                </select>
-            </div>
-            *}
-            {
                 /*Se recorren todos los productos que se obtuvieron de leer el JSON, y
-            que se encuentran en el array product.
-            */
+                que se encuentran en el array product.
+                */
 
-                props.product.map((data) => {
+                //props.product.map((data) => {
+                Prodcategory.map((data) => {
                     return (
                         <div className="dataProduct-container">
                             <Item key={data.idProducto} dataProduct={data} />

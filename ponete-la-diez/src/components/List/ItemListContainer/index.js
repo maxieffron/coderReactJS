@@ -45,7 +45,7 @@ function ItemListContainer(props) {
             <h1>{props.greeting}</h1>
 
             {/*Pasamos el array de productos que traje del JSON*/}
-            <ItemList product={prod} />
+            <ItemList category={props.category} product={prod} />
         </div>
     );
 }

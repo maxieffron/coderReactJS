@@ -26,18 +26,22 @@ function NavegationBar() {
     return (
         <Navbar id="navegation-Bar" expand="lg">
             <Container id="nav-Container">
-                <Navbar.Brand href="#home">
+                <Navbar.Brand href="#Products">
                     <LogoWidget />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="nav-Menu">
-                        <LinkMenu href={"/home"} itemMenu={"Inicio"} />
-                        <LinkMenu href={"/AboutUs"} itemMenu={"Nosotros"} />
                         <LinkMenu href={"/Products"} itemMenu={"Productos"} />
                         <LinkMenu
-                            href={"/Faq"}
-                            itemMenu={"Preguntas Frecuentes"}
+                            href={"/PrimeraDiv"}
+                            itemMenu={"Primera División"}
+                        />
+                        <LinkMenu href={"/Ascenso"} itemMenu={"Ascenso"} />
+
+                        <LinkMenu
+                            href={"/PremierLeague"}
+                            itemMenu={"Premier League"}
                         />
                         <LinkMenu href={"/Contact"} itemMenu={"Contacto"} />
                     </Nav>

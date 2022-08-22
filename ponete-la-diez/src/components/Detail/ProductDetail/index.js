@@ -18,7 +18,6 @@ function ProductDetail(props) {
     }
 
     function addCartProducts() {
-        debugger;
         /*** Acá se van a ir agregando los productos ***/
         const prodAdded = { ...props, cantidad: cantProducts };
         console.log("PRODUCTO: ", prodAdded);
