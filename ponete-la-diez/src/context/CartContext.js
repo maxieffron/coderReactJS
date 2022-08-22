@@ -68,6 +68,17 @@ const CartCustomContext = ({ children }) => {
         return cart.length;
     };
 
+    /*** Importe total ***/
+    const totalPrice = () => {
+        let price = 0;
+
+        for (const item of cart) {
+            price = price + item.cantidad * item.precio;
+        }
+
+        return price;
+    };
+
     return (
         /*Al poner "cart", "addToCart" en el value, estoy haciendo accesible ese objeto para el componente que utilice este contexto.
          */
@@ -79,6 +90,7 @@ const CartCustomContext = ({ children }) => {
                 removeFromCart,
                 removeAll,
                 totalProduct,
+                totalPrice,
             }}
         >
             {children}

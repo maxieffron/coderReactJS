@@ -1,6 +1,7 @@
 //Importamos el hook "useContext" para poder acceder al contenido
 //del "CartContext"
 import { useState, useEffect, useContext } from "react";
+import swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 //Importamos el "CartContext" para accederlo
 import { CartContext } from "../../context/CartContext";
@@ -22,8 +23,25 @@ export default function CartWidget(props) {
     const navigateToCartDetail = useNavigate();
 
     function goToCartDetail() {
-        //Esto nos lleva a la pantalla del detalle del carrito
-        navigateToCartDetail(`/Cart`);
+        if (total === 0) {
+            swal.fire(
+                {
+                    title: "Lo siento. Todavía no tenes productos agregados al carrito.",
+                    //text: "Ingresando al shopping...",
+                    icon: "warning",
+                    showConfirmButton: false,
+                    timer: 2000,
+                },
+                setTimeout(() => {
+                    //Si no hay productos en el carrito, nos lleva a la pantalla de los productos
+                    //y no a la del detalle del carrito.
+                    navigateToCartDetail(`/products`);
+                }, 2000)
+            );
+        } else {
+            //Esto nos lleva a la pantalla del detalle del carrito
+            navigateToCartDetail(`/Cart`);
+        }
     }
 
     return (

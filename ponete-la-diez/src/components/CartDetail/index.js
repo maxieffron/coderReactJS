@@ -8,17 +8,40 @@ import { useNavigate } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 //Importamos el hook "useContext" para poder acceder al contenido
 //del "CartContext"
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 //Importamos el css de este componente
 import "./CartDetail.css";
 
 function CartDetail() {
+    const discount = 0;
+
     /*Con esto puedo tener acceso al parámetro "cart" cuyo valor
     se encuentra en el contexto "CartContext"
     */
-    const { cart, removeFromCart, removeAll } = useContext(CartContext);
+    const { cart, removeFromCart, removeAll, totalProduct, totalPrice } =
+        useContext(CartContext);
+
+    //Cantidad de productos
+    const [totalItems, settotalItems] = useState(totalProduct);
+
+    //SubTotal de la compra
+    const [subTotal, setSubTotal] = useState(0);
+
+    //Total de la compra
+    const [totalImport, setTotalImport] = useState(totalPrice);
 
     const navigateFn = useNavigate();
+
+    //Con esto actualizamos la cantidad total de productos DENTRO DE LA PANTALLA DETALLE
+    useEffect(() => {
+        settotalItems(totalProduct);
+    }, [totalProduct]);
+
+    //Con esto actualizamos el importe total de la compra DENTRO DE LA PANTALLA DETALLE
+    useEffect(() => {
+        setTotalImport(totalPrice);
+        setSubTotal(totalPrice);
+    }, [totalPrice]);
 
     //Para validar si hay productos o no en el carrito. En base a eso, habilitamos
     //o deshabilitamos los botones de "Borrar Todo" o "Finalizar Compra"
@@ -36,6 +59,24 @@ function CartDetail() {
             btBuy.disabled = false;
         }
     });
+
+    //Aplicar descuento
+    const ApplyDiscount = () => {
+        const cupon = document.getElementById("discount");
+        const btDiscount = document.getElementById("btnDiscount");
+
+        switch (cupon.touppercase()) {
+            case 1:
+                break;
+
+            default:
+                break;
+        }
+
+        //Una vez que aplicamos el descuento, bloqueamos el botón
+        btDiscount.setAttribute("style", "background-color:#c4c4c4;");
+        btDiscount.disabled = true;
+    };
 
     const cleanCart = () => {
         swal.fire({
@@ -121,7 +162,6 @@ function CartDetail() {
                                 </div>
                                 <div className="itemDetails">
                                     <h5>
-                                        {" "}
                                         {`$${parseInt(
                                             item.cantidad * item.precio
                                         ).toFixed(2)}`}
@@ -143,7 +183,60 @@ function CartDetail() {
 
             <div className="OrderSummaryContainer">
                 <div className="OrderContainer">
-                    <h2>Orden de Compra</h2>
+                    <div className="titleContainer">
+                        <h2>Orden de Compra</h2>
+                    </div>
+                    <div className="postalCodeContainer">
+                        <input
+                            type="text"
+                            placeholder="Ingrese Código Postal"
+                            maxLength={4}
+                        ></input>
+
+                        <button>Calcular</button>
+                    </div>
+
+                    <div className="DiscountContainer">
+                        <input
+                            id="discount"
+                            type="text"
+                            placeholder="Cupón de descuento"
+                            maxLength={6}
+                        ></input>
+
+                        <button id="btnDiscount" onClick={ApplyDiscount}>
+                            Aplicar
+                        </button>
+                    </div>
+
+                    <div className="priceContainer">
+                        <div className="prices">
+                            <h4>Cantidad de Productos:</h4>
+                            <h4>{totalItems}</h4>
+                        </div>
+
+                        <div className="prices">
+                            <h4>Subtotal:</h4>
+                            <h4>{`$${parseInt(subTotal).toLocaleString(
+                                "es"
+                            )}`}</h4>
+                        </div>
+
+                        <div className="prices">
+                            <h4>Descuento:</h4>
+                            <h4>{`${discount}%`}</h4>
+                        </div>
+
+                        <div className="prices">
+                            <h3>Total: </h3>
+                            <h3>
+                                {" "}
+                                {`$${parseInt(totalImport).toLocaleString(
+                                    "es"
+                                )}`}
+                            </h3>
+                        </div>
+                    </div>
                 </div>
                 <div className="btnBuyContainer">
                     <button className="btnClear" onClick={cleanCart}>

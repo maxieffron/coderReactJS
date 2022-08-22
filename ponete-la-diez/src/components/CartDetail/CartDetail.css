@@ -90,15 +90,113 @@
 }
 
 .OrderContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
     height: 75%;
+    /*border: 1px solid red;*/
 }
+
+/*Div del h2 --> Dentro de OrderContainer*/
+.titleContainer {
+    height: 15%;
+    background-color: bisque;
+    border-radius: 6px;
+}
+
+/*Código Postal --> Dentro de OrderContainer*/
+.postalCodeContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 20%;
+    /*background-color: aquamarine;*/
+}
+
+.postalCodeContainer > input {
+    height: 35px;
+    width: 45%;
+    margin-top: 20px;
+    margin-left: 20px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.postalCodeContainer > button {
+    height: 35px;
+    width: 35%;
+    margin-top: 20px;
+    margin-right: 20px;
+    border-radius: 6px;
+    color: #ffffff;
+    background-color: var(--primaryColor); /*Azul*/
+    box-shadow: 4px 4px 8px #888888;
+}
+/*------------------------------------------------------------*/
+
+/*Cupones de descuento --> Dentro de OrderContainer*/
+.DiscountContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 20%;
+    /*background-color: crimson;*/
+}
+
+.DiscountContainer > input {
+    height: 35px;
+    width: 45%;
+    margin-top: 20px;
+    margin-left: 20px;
+    text-align: center;
+    border-radius: 6px;
+    border-style: dashed;
+}
+
+.DiscountContainer > button {
+    height: 35px;
+    width: 35%;
+    margin-top: 20px;
+    margin-right: 20px;
+    border-radius: 6px;
+    color: #ffffff;
+    background-color: var(--primaryColor); /*Azul*/
+    box-shadow: 4px 4px 8px #888888;
+}
+/*------------------------------------------------------------*/
+
+/*Importes --> Dentro de OrderContainer*/
+.priceContainer {
+    height: 30%;
+    text-align: left;
+}
+
+.prices {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 10px;
+    border-bottom: 1px solid;
+    border-bottom-color: #888888;
+    background-color: bisque;
+}
+
+.prices > h3 {
+    color: var(--secondaryColor);
+}
+
+/*** BOTONES "Borrar Todo" y "Finalizar Compra" ***/
 
 .btnBuyContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-content: center;
+    align-content: flex-end; /*center;*/
     height: 20%;
 }
 

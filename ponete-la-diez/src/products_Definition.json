@@ -15,7 +15,6 @@
             ],
             "stock": 6000,
             "precio": 10000,
-            "descuento": 20,
             "imagenAnverso": "../images/products/Primera División/Argentina-F.png",
             "imagenReverso": "../images/products/Primera División/Argentina-R.png"
         },
@@ -34,7 +33,6 @@
             ],
             "stock": 6000,
             "precio": 9500,
-            "descuento": 0,
             "imagenAnverso": "../images/products/Primera División/River-F.png",
             "imagenReverso": "../images/products/Primera División/River-R.png"
         },
@@ -53,7 +51,6 @@
             ],
             "stock": 6000,
             "precio": 9500,
-            "descuento": 0,
             "imagenAnverso": "../images/products/Primera División/Boca-F.png",
             "imagenReverso": "../images/products/Primera División/Boca-R.png"
         },
@@ -72,7 +69,6 @@
             ],
             "stock": 4300,
             "precio": 8500,
-            "descuento": 0,
             "imagenAnverso": "../images/products/Primera División/Independiente-F.png",
             "imagenReverso": "../images/products/Primera División/Independiente-R.png"
         },
@@ -91,7 +87,6 @@
             ],
             "stock": 4300,
             "precio": 8500,
-            "descuento": 0,
             "imagenAnverso": "../images/products/Primera División/Racing-F.png",
             "imagenReverso": "../images/products/Primera División/Racing-R.png"
         },
@@ -110,7 +105,6 @@
             ],
             "stock": 5300,
             "precio": 8000,
-            "descuento": 0,
             "imagenAnverso": "../images/products/Primera División/San Lorenzo-F.png",
             "imagenReverso": "../images/products/Primera División/San Lorenzo-R.png"
         },
@@ -129,7 +123,6 @@
             ],
             "stock": 4300,
             "precio": 8000,
-            "descuento": 0,
             "imagenAnverso": "../images/products/Primera División/Huracan-F.png",
             "imagenReverso": "../images/products/Primera División/Huracan-R.png"
         },
@@ -148,7 +141,6 @@
             ],
             "stock": 4300,
             "precio": 8000,
-            "descuento": 0,
             "imagenAnverso": "../images/products/Primera División/Velez-F.png",
             "imagenReverso": "../images/products/Primera División/Velez-R.png"
         },
@@ -167,7 +159,6 @@
             ],
             "stock": 1000,
             "precio": 4500,
-            "descuento": 0,
             "imagenAnverso": "../images/products/Primera División/Argentinos Jrs-F.png",
             "imagenReverso": "../images/products/Primera División/Argentinos Jrs-F.png"
         },
@@ -186,7 +177,6 @@
             ],
             "stock": 3000,
             "precio": 6900,
-            "descuento": 10,
             "imagenAnverso": "../images/products/Primera División/Estudiantes-F.png",
             "imagenReverso": "../images/products/Primera División/Estudiantes-F.png"
         },
@@ -205,7 +195,6 @@
             ],
             "stock": 2500,
             "precio": 6000,
-            "descuento": 10,
             "imagenAnverso": "../images/products/Primera División/Gimnasia-F.png",
             "imagenReverso": "../images/products/Primera División/Gimnasia-F.png"
         },
@@ -224,7 +213,6 @@
             ],
             "stock": 4000,
             "precio": 8000,
-            "descuento": 0,
             "imagenAnverso": "../images/products/Primera División/Newells-F.png",
             "imagenReverso": "../images/products/Primera División/Newells-R.png"
         },
@@ -243,7 +231,6 @@
             ],
             "stock": 4000,
             "precio": 8000,
-            "descuento": 0,
             "imagenAnverso": "../images/products/Primera División/Central-F.png",
             "imagenReverso": "../images/products/Primera División/Central-R.png"
         },
@@ -262,7 +249,6 @@
             ],
             "stock": 4000,
             "precio": 6700,
-            "descuento": 20,
             "imagenAnverso": "../images/products/Primera División/Tigre-F.png",
             "imagenReverso": "../images/products/Primera División/Tigre-F.png"
         },
@@ -281,7 +267,6 @@
             ],
             "stock": 500,
             "precio": 3000,
-            "descuento": 0,
             "imagenAnverso": "../images/products/Ascenso/Almagro - Frente.png",
             "imagenReverso": "../images/products/Ascenso/Almagro - Reverso.png"
         },
@@ -300,7 +285,6 @@
             ],
             "stock": 800,
             "precio": 3000,
-            "descuento": 0,
             "imagenAnverso": "../images/products/Ascenso/Almirante Brown - Frente.png",
             "imagenReverso": "../images/products/Ascenso/Almirante Brown - Reverso.png"
         },
@@ -319,7 +303,6 @@
             ],
             "stock": 1600,
             "precio": 3000,
-            "descuento": 0,
             "imagenAnverso": "../images/products/Ascenso/Atlanta - Frente.png",
             "imagenReverso": "../images/products/Ascenso/Atlanta - Reverso.png"
         },
@@ -338,7 +321,6 @@
             ],
             "stock": 1000,
             "precio": 3000,
-            "descuento": 0,
             "imagenAnverso": "../images/products/Ascenso/Berazategui - Frente.png",
             "imagenReverso": "../images/products/Ascenso/Berazategui - Reverso.png"
         },
@@ -357,7 +339,6 @@
             ],
             "stock": 4000,
             "precio": 3000,
-            "descuento": 0,
             "imagenAnverso": "../images/products/Ascenso/Brown Adrogue - Frente.png",
             "imagenReverso": "../images/products/Ascenso/Brown Adrogue - Reverso.png"
         },
@@ -376,7 +357,6 @@
             ],
             "stock": 760,
             "precio": 3000,
-            "descuento": 0,
             "imagenAnverso": "../images/products/Ascenso/Chacarita - Frente.png",
             "imagenReverso": "../images/products/Ascenso/Chacarita - Reverso.png"
         },
@@ -395,7 +375,6 @@
             ],
             "stock": 2360,
             "precio": 3000,
-            "descuento": 0,
             "imagenAnverso": "../images/products/Ascenso/Dep. Español - Frente.png",
             "imagenReverso": "../images/products/Ascenso/Dep. Español - Reverso.png"
         },
@@ -414,7 +393,6 @@
             ],
             "stock": 1604,
             "precio": 3000,
-            "descuento": 0,
             "imagenAnverso": "../images/products/Ascenso/Ferro - Frente.png",
             "imagenReverso": "../images/products/Ascenso/Ferro - Reverso.png"
         },
@@ -433,7 +411,6 @@
             ],
             "stock": 3410,
             "precio": 3000,
-            "descuento": 0,
             "imagenAnverso": "../images/products/Ascenso/Racing de Cordoba - Frente.png",
             "imagenReverso": "../images/products/Ascenso/Racing de Cordoba - Reverso.png"
         },
@@ -452,7 +429,6 @@
             ],
             "stock": 500,
             "precio": 3000,
-            "descuento": 0,
             "imagenAnverso": "../images/products/Ascenso/San Miguel - Frente.png",
             "imagenReverso": "../images/products/Ascenso/San Miguel - Reverso.png"
         },
@@ -471,7 +447,6 @@
             ],
             "stock": 500,
             "precio": 6000,
-            "descuento": 10,
             "imagenAnverso": "../images/products/Premier/Arsenal - 2022-2023 - Frente.png",
             "imagenReverso": "../images/products/Premier/Arsenal - 2022-2023 - Reverso.png"
         },
@@ -490,7 +465,6 @@
             ],
             "stock": 500,
             "precio": 6500,
-            "descuento": 0,
             "imagenAnverso": "../images/products/Premier/Chelsea - 2022-2023 - Frente.png",
             "imagenReverso": "../images/products/Premier/Chelsea - 2022-2023 - Reverso.png"
         },
@@ -509,7 +483,6 @@
             ],
             "stock": 100,
             "precio": 7000,
-            "descuento": 15,
             "imagenAnverso": "../images/products/Premier/Liverpool 2022-2023 - Titular Frente.png",
             "imagenReverso": "../images/products/Premier/Liverpool 2022-2023 - Titular Reverso.png"
         },
@@ -528,7 +501,6 @@
             ],
             "stock": 300,
             "precio": 7200,
-            "descuento": 0,
             "imagenAnverso": "../images/products/Premier/Liverpool 2022-2023 - Suplente Frente.png",
             "imagenReverso": "../images/products/Premier/Liverpool 2022-2023 - Suplente Reverso.png"
         },
@@ -547,7 +519,6 @@
             ],
             "stock": 2600,
             "precio": 9000,
-            "descuento": 0,
             "imagenAnverso": "../images/products/Premier/Manchester City - 2022-2023 - Frente.png",
             "imagenReverso": "../images/products/Premier/Manchester City - 2022-2023 - Reverso.png"
         },
@@ -566,7 +537,6 @@
             ],
             "stock": 4700,
             "precio": 8000,
-            "descuento": 10,
             "imagenAnverso": "../images/products/Premier/Manchester United - 2022-2023 - Frente.png",
             "imagenReverso": "../images/products/Premier/Manchester United - 2022-2023 - Reverso.png"
         },
@@ -585,7 +555,6 @@
             ],
             "stock": 4200,
             "precio": 7000,
-            "descuento": 0,
             "imagenAnverso": "../images/products/Premier/Tottenham - 2022-2023 - Frente.png",
             "imagenReverso": "../images/products/Premier/Tottenham - 2022-2023 - Reverso.png"
         },
@@ -604,7 +573,6 @@
             ],
             "stock": 4000,
             "precio": 8000,
-            "descuento": 10,
             "imagenAnverso": "../images/products/Premier/Leeds - 2022-2023 - Suplente Frente.png",
             "imagenReverso": "../images/products/Premier/Leeds - 2022-2023 - Suplente Frente.png"
         },
@@ -623,7 +591,6 @@
             ],
             "stock": 3000,
             "precio": 7100,
-            "descuento": 0,
             "imagenAnverso": "../images/products/Premier/NewCastle - 2022-2023 - Frente.png",
             "imagenReverso": "../images/products/Premier/NewCastle - 2022-2023 - Frente.png"
         }
