@@ -37,7 +37,7 @@ export default function ItemList(props) {
                 Prodcategory.map((data) => {
                     return (
                         <div className="dataProduct-container">
-                            <Item key={data.idProducto} dataProduct={data} />
+                            <Item key={data.id} dataProduct={data} />
                         </div>
                     );
                 })

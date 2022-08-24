@@ -13,11 +13,11 @@ const CartCustomContext = ({ children }) => {
     //*** Agregar al Carrito ***
     const addToCart = (product) => {
         /*Primero verificamos si el producto que queremos agregar al carrito ya existe */
-        if (isInCart(product.idProducto)) {
+        if (isInCart(product.id)) {
             //EL PRODUCTO EXISTE
 
             const newCart = cart.map((productExist) => {
-                if (product.idProducto === productExist.idProducto) {
+                if (product.id === productExist.id) {
                     //Encontramos el producto --> Actualizamos la cantidad
                     return {
                         ...productExist,
@@ -43,7 +43,7 @@ const CartCustomContext = ({ children }) => {
     //*** Verificar si el producto ya fue agregado al carrito ***
     const isInCart = (id) => {
         const productAdded = cart.find(
-            (productAdded) => productAdded.idProducto === id
+            (productAdded) => productAdded.id === id
         );
 
         //Si el producto existe, devuelve true. Sino, false.
@@ -55,7 +55,7 @@ const CartCustomContext = ({ children }) => {
     const removeFromCart = (id) => {
         //Aquí me quedo con todos los productos, excepto con el
         //producto que le pasé el id.
-        setCart(cart.filter((product) => product.idProducto !== id));
+        setCart(cart.filter((product) => product.id !== id));
     };
 
     /*** Vaciamos el carrito  ***/

@@ -7,37 +7,74 @@ import Swal from "sweetalert2";
 /*import "../../index.css";*/
 import "./ItemListContainer.css";
 import ItemList from "../ItemList";
-import Products from "../../../products_Definition.json";
+//import Products from "../../../config/products_Definition.json";
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+//Estas importaciones nos van a permitir conectarnos a la BD y cargar todos los documentos
+//de una tabla.
+import {
+    getFirestore,
+    collection,
+    getDocs,
+    query,
+    orderBy,
+} from "firebase/firestore";
+//Importamos el archivo ConfigFirebase.js, que contiene toda la configuración de la BD.
+import firebaseConfig from "../../../config/ConfigFirebase";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+//-----------------------------------------------------------------------------------------
 function ItemListContainer(props) {
     const [prod, setProduct] = useState([]);
     //const [loadingProd, setLoadingProd] = useState(true);
 
     useEffect(() => {
-        //Acá vamos a crear una promesa para traer todos los productos POR ÚNICA VEZ
-        const getProductos = new Promise(() => {});
-        getProductos.then(
-            Swal.fire({
-                title: "Bienvenido/a!!",
-                text: "Ingresando al shopping...",
-                icon: "success",
-                showConfirmButton: false,
-                timer: 2000,
-            }),
-            setTimeout(() => {
-                setProduct(Products.productos);
-            }, 2000)
-        );
-        getProductos.catch(
-            console.log("Error al intentar obtener los productos")
+        // 1) Initializamos Firebase creando una instancia de la app, a partir de la configuración
+        // que nos da Firebase y que la pusimos en el archivo ConfigFirebase.js
+        const app = initializeApp(firebaseConfig);
+        // 2) Vamos a conectar la con la Base de Datos
+        const db = getFirestore(app);
+        // 3) Nos traernos TODOS los documentos de la colección "products" (O sea, de la tabla).
+        //Esto sería como una Query.
+        const colRef = query(
+            collection(db, "products"),
+            orderBy("idMostrar", "asc")
         );
 
-        /*
-        getProductos.finally(
-            //Con esto indicamos que la apertura del e-commerce ya está hecha.
-            setLoadingProd(false)
+        /* 
+        4) Acá es donde vamos a hacer la llamada, que a su vez nos va a devolver una promesa
+        con un array de productos.*/
+        getDocs(colRef).then(
+            (snapshot) => {
+                /*Esos productos del array, vienen a través de Firestore docs.
+                El formato de Firestore docs es "raw format".
+                Entonces, vamos a hacer un mapeo y obtener los datos de la colección en nuestro formato.*/
+                const getProductos = snapshot.docs.map((rawDoc) => {
+                    return {
+                        //Este es el id random que genera Firebase
+                        id: rawDoc.id,
+                        ...rawDoc.data(), //El resto de los datos
+                    };
+                });
+
+                Swal.fire(
+                    {
+                        title: "Bienvenido/a!!",
+                        text: "Ingresando al shopping...",
+                        icon: "success",
+                        showConfirmButton: false,
+                        timer: 2000,
+                    },
+                    setTimeout(() => {
+                        setProduct(getProductos);
+                    }, 2000)
+                );
+            },
+            (error) => {
+                console.log(`Error ${error} al obtener los datos de Firebase.`);
+            }
         );
-        */
     }, []);
 
     return (

@@ -79,28 +79,33 @@ function ProductDetail(props) {
         <div className="ProductDetail">
             <div className="Detail-info-Container">
                 <div className="Detail-info">
-                    <h3>Nombre:</h3>
-                    <h4>{props.nombre}</h4>
+                    <h4>Nombre:</h4>
+                    <p>{props.nombre}</p>
                 </div>
 
                 <div className="Detail-info">
-                    <h3>Categoría:</h3>
-                    <h4>{props.categoria}</h4>
+                    <h4>Categoría:</h4>
+                    <p>{props.categoria}</p>
                 </div>
 
                 <div className="Detail-info">
-                    <h3>Equipo:</h3>
-                    <h4>{props.equipo}</h4>
+                    <h4>Equipo:</h4>
+                    <p>{props.equipo}</p>
                 </div>
 
                 <div className="Detail-info">
-                    <h3>Stock:</h3>
-                    <h4>{props.stock}</h4>
+                    <h4>Stock:</h4>
+                    <p>{props.stock}</p>
                 </div>
 
                 <div className="Detail-info">
-                    <h3>Precio:</h3>
-                    <h4>{` $${props.precio}`}</h4>
+                    <h4>Precio:</h4>
+                    <p>{` $${props.precio}`}</p>
+                </div>
+
+                <div className="Detail-info">
+                    <h4>Descripción:</h4>
+                    <p>{` ${props.descripcion}`}</p>
                 </div>
 
                 <div className="buttons-detail">
@@ -113,7 +118,7 @@ function ProductDetail(props) {
 
                     <button
                         className="button-AddCart"
-                        id={`id-Count-${props.idProducto}`}
+                        id={`id-Count-${props.id}`}
                         onClick={addCartProducts}
                     >
                         Agregar al carrito

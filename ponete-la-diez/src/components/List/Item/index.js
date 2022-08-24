@@ -12,15 +12,15 @@ function Item(props) {
 
     const loadDetails = () => {
         //Se llama a la navegación que nos llevará a ver el detalle
-        navigateFn(`/details/${props.dataProduct.idProducto}`);
+        navigateFn(`/details/${props.dataProduct.id}`);
     };
 
     return (
         //Aquí recorremos el array con la imágen y la info del producto
 
         <div
-            key={props.dataProduct.idProducto}
-            id={`prod${props.dataProduct.idProducto}`}
+            key={props.dataProduct.id}
+            id={`prod${props.dataProduct.id}`}
             className="ProductContainer"
         >
             <div className="product-Cont-img">
@@ -43,7 +43,7 @@ function Item(props) {
                     <p>Stock:{props.dataProduct.stock}</p>
                 </div>
                 <div className="product-detail">
-                    {/*<Link to={`/details/${props.dataProduct.idProducto}`}>
+                    {/*<Link to={`/details/${props.dataProduct.id}`}>
                         <button onClick={loadDetails}>
                             <span>Ver Detalle</span>
                         </button>

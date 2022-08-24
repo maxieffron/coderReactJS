@@ -71,7 +71,7 @@ function CartDetail() {
     //Aplicar descuento
     const ApplyDiscount = () => {
         let cupon = document.getElementById("cuponDiscount").value;
-        const btDiscount = document.getElementById("btnDiscount");
+        //const btDiscount = document.getElementById("btnDiscount");
 
         if (cupon.length < 6) {
             swal.fire({
@@ -85,18 +85,34 @@ function CartDetail() {
             cupon = cupon.substr(0, 1);
 
             switch (cupon) {
-                case "A" || "C" || "D" || "E" || "F":
+                case "A":
+                case "C":
+                case "D":
+                case "E":
+                case "F":
                     setDiscount(10);
                     break;
 
-                case "G" || "H" || "I" || "J" || "L":
+                case "G":
+                case "H":
+                case "I":
+                case "J":
+                case "L":
                     setDiscount(15);
                     break;
 
-                case "M" || "N" || "P" || "Q" || "R":
+                case "M":
+                case "N":
+                case "P":
+                case "Q":
+                case "R":
                     setDiscount(20);
                     break;
-                case "S" || "T" || "U" || "V" || "X":
+                case "S":
+                case "T":
+                case "U":
+                case "V":
+                case "X":
                     setDiscount(5);
                     break;
                 default:
@@ -110,11 +126,11 @@ function CartDetail() {
                     break;
             }
 
+            /*
             //Una vez que aplicamos el descuento, bloqueamos el botón
             btDiscount.setAttribute("style", "background-color:#c4c4c4;");
             btDiscount.disabled = true;
-            //cupon.setAttribute("style", "background-color:#c4c4c4;");
-            //cupon.disabled = true;
+            */
         }
     };
 
@@ -122,7 +138,6 @@ function CartDetail() {
         let cupon = document.getElementById("cuponDiscount").value;
         let cuponInput = document.getElementById("cuponDiscount");
         const re = new RegExp("^[a-zA-Z]+$");
-        debugger;
 
         cupon = cupon.toUpperCase();
         console.log(cupon);
@@ -225,11 +240,9 @@ function CartDetail() {
                                         ).toLocaleString("en")}`}
                                     </h5>
                                     <button
-                                        onClick={() =>
-                                            removeFromCart(item.idProducto)
-                                        }
+                                        onClick={() => removeFromCart(item.id)}
                                         className="buttonDelete"
-                                        id={`btnDelete-${item.idProducto}`}
+                                        id={`btnDelete-${item.id}`}
                                     >
                                         Quitar Producto
                                     </button>
