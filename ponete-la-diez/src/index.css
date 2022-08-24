@@ -63,6 +63,17 @@ h1 {
 /*********************************
 ********** MEDIA QUERYS **********
 *********************************/
+@media screen and (max-width: 1200px) {
+    /** ITEM-LIST **/
+    .dataProduct-container {
+        width: 40%;
+    }
+
+    /** PRODUCT-DETAIL **/
+    .Detail-photo-Container {
+        width: 40%;
+    }
+}
 
 @media screen and (max-width: 992px) {
     /** ITEM-LIST **/
@@ -73,12 +84,12 @@ h1 {
     /** PRODUCT-DETAIL **/
 
     .Detail-info-Container {
-        width: 70%;
+        width: 65%;
         margin-bottom: 20px;
     }
 
     .Detail-photo-Container {
-        width: 70%;
+        width: 65%;
         margin-top: 20px;
     }
 
@@ -117,6 +128,11 @@ h1 {
 
     /** PRODUCT-DETAIL **/
 
+    /*Engloba todos los campos de la descripción*/
+    .Detail-Fields {
+        height: 60%;
+    }
+
     .Detail-info h4 {
         font-size: 20px;
     }
@@ -125,7 +141,12 @@ h1 {
         font-size: 18px;
     }
 
-    /* Botón "Volver"*/
+    /*Container de los botones "Volver" y "Agregar al carrito"*/
+    .buttons-detail {
+        margin-bottom: 50px;
+    }
+
+    /* Botones "Volver" y "Agregar al carrito"*/
     .button-ComeBack,
     .button-AddCart {
         /*margin-top: 30px;*/
@@ -166,7 +187,7 @@ h1 {
 
     .Detail-info p {
         font-size: 14px;
-        padding-left: 35px;
+        padding-left: 40px;
     }
 
     /* Botón "Volver" y "Agregar" */
@@ -193,12 +214,8 @@ h1 {
 
     /** PRODUCT-DETAIL **/
 
-    .itemCountDetailContainer {
-        margin-top: 12px;
-    }
-
     .Detail-info-Container {
-        height: 100%;
+        height: 80%;
     }
 
     .Detail-info h4 {
@@ -211,6 +228,7 @@ h1 {
 
     .buttons-detail {
         margin-top: -20px;
+        margin-bottom: 0;
     }
 
     /* Botón "Volver" y "Agregar" */

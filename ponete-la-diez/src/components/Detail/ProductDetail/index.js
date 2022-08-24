@@ -78,34 +78,36 @@ function ProductDetail(props) {
     return (
         <div className="ProductDetail">
             <div className="Detail-info-Container">
-                <div className="Detail-info">
-                    <h4>Nombre:</h4>
-                    <p>{props.nombre}</p>
-                </div>
+                <div className="Detail-Fields">
+                    <div className="Detail-info">
+                        <h4>Nombre:</h4>
+                        <p>{props.nombre}</p>
+                    </div>
 
-                <div className="Detail-info">
-                    <h4>Categoría:</h4>
-                    <p>{props.categoria}</p>
-                </div>
+                    <div className="Detail-info">
+                        <h4>Categoría:</h4>
+                        <p>{props.categoria}</p>
+                    </div>
 
-                <div className="Detail-info">
-                    <h4>Equipo:</h4>
-                    <p>{props.equipo}</p>
-                </div>
+                    <div className="Detail-info">
+                        <h4>Equipo:</h4>
+                        <p>{props.equipo}</p>
+                    </div>
 
-                <div className="Detail-info">
-                    <h4>Stock:</h4>
-                    <p>{props.stock}</p>
-                </div>
+                    <div className="Detail-info">
+                        <h4>Stock:</h4>
+                        <p>{props.stock}</p>
+                    </div>
 
-                <div className="Detail-info">
-                    <h4>Precio:</h4>
-                    <p>{` $${props.precio}`}</p>
-                </div>
+                    <div className="Detail-info">
+                        <h4>Precio:</h4>
+                        <p>{` $${props.precio}`}</p>
+                    </div>
 
-                <div className="Detail-info">
-                    <h4>Descripción:</h4>
-                    <p>{` ${props.descripcion}`}</p>
+                    <div className="Detail-info">
+                        <h4>Descripción:</h4>
+                        <p>{` ${props.descripcion}`}</p>
+                    </div>
                 </div>
 
                 <div className="buttons-detail">
