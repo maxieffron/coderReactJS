@@ -26,13 +26,13 @@ function NavegationBar() {
     return (
         <Navbar id="navegation-Bar" expand="lg">
             <Container id="nav-Container">
-                <Navbar.Brand href="#Products">
+                <Navbar.Brand href={"/"}>
                     <LogoWidget />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="nav-Menu">
-                        <LinkMenu href={"/Products"} itemMenu={"Productos"} />
+                        <LinkMenu href={"/"} itemMenu={"Todos"} />
                         <LinkMenu
                             href={"/PrimeraDiv"}
                             itemMenu={"Primera División"}

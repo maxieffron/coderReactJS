@@ -12,7 +12,7 @@
 
 /*La parte del detalle*/
 .detailContainer {
-    width: 60%;
+    width: 65%;
     border: 2px solid var(--secondaryColor); /*Verde*/
     box-shadow: 4px 4px 8px #888888;
     border-bottom: 0;

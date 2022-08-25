@@ -1,7 +1,7 @@
 //import logo from "./logo.svg";
 import "./App.css";
 //Referenciamos el componente "NavBar"
-import NavBar from "./components/NavegationBar";
+import NavegationBar from "./components/NavegationBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 //import ItemListContainer from "./components/ItemListContainer";
 //import ProductDetailContainer from "./components/ProductDetailContainer";
@@ -22,10 +22,10 @@ function App() {
         <CartCustomContext>
             <BrowserRouter>
                 <div className="App">
-                    <NavBar />
+                    <NavegationBar />
 
                     <Routes>
-                        <Route path="/Products" element={<Products />} />
+                        <Route path="/" element={<Products />} />
                         <Route path="/PrimeraDiv" element={<PrimeraDiv />} />
                         <Route path="/Ascenso" element={<Ascenso />} />
 
