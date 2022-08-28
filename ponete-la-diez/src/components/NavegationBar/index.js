@@ -43,7 +43,6 @@ function NavegationBar() {
                             href={"/PremierLeague"}
                             itemMenu={"Premier League"}
                         />
-                        <LinkMenu href={"/Contact"} itemMenu={"Contacto"} />
                     </Nav>
                 </Navbar.Collapse>
                 <CartWidget />

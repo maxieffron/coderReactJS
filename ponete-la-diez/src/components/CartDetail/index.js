@@ -152,7 +152,7 @@ function CartDetail() {
 
     const cleanCart = () => {
         swal.fire({
-            title: `¿Realmente desea limpiar el carrito de compras?`,
+            title: `¿Realmente queres limpiar el carrito de compras?`,
             icon: "question",
             showCancelButton: true,
             confirmButtonColor: "#5bb669",
@@ -161,6 +161,7 @@ function CartDetail() {
             cancelButtonText: "No",
         }).then((result) => {
             if (result.isConfirmed) {
+                localStorage.clear();
                 /*Se limpia el carrito*/
                 removeAll();
                 setDiscount(0);
@@ -170,7 +171,7 @@ function CartDetail() {
 
     const endBuy = () => {
         swal.fire({
-            title: `¿Realmente desea finalizar la compra?`,
+            title: `¿Realmente queres finalizar la compra?`,
             icon: "question",
             showCancelButton: true,
             confirmButtonColor: "#4c98df",
@@ -182,14 +183,21 @@ function CartDetail() {
                 swal.fire(
                     {
                         icon: "success",
-                        title: "¡¡Muchas gracias por elegirnos!!",
+                        title: "Ya falta poquito para que los productos sean tuyos",
                         showConfirmButton: false,
                         timer: 2000,
                     },
                     setTimeout(() => {
-                        /*Se llama a la navegación que nos llevará a la páginal principal del sitio y se limpia el carrito*/
-                        removeAll();
-                        navigateFn(`/Products`);
+                        const buyerImports = JSON.stringify({
+                            cantProductos: totalItems,
+                            subTotal: subTotal,
+                            descuento: discount,
+                            total: totalImport,
+                        });
+                        localStorage.setItem("buyer", buyerImports);
+
+                        /*Se llama a la navegación que nos llevará a completar el formulario de compra*/
+                        navigateFn(`/OrderBuyer`);
                     }, 2000)
                 );
             }

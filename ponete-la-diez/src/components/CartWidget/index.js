@@ -35,7 +35,7 @@ export default function CartWidget(props) {
                 setTimeout(() => {
                     //Si no hay productos en el carrito, nos lleva a la pantalla de los productos
                     //y no a la del detalle del carrito.
-                    navigateToCartDetail(`/products`);
+                    navigateToCartDetail(`/`);
                 }, 2000)
             );
         } else {

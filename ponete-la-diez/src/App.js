@@ -10,7 +10,7 @@ import PrimeraDiv from "./pages/PrimeraDiv";
 import Ascenso from "./pages/Ascenso";
 import Products from "./pages/Products";
 import PremierLeague from "./pages/PremierLeague";
-import Contact from "./pages/Contact";
+import OrderBuyer from "./pages/OrderBuyer";
 import Cart from "./pages/Cart";
 //import ProductDetailFound from "./pages/Details";
 import ProductDetailContainer from "./components/Detail/ProductDetailContainer";
@@ -37,7 +37,7 @@ function App() {
                             path="/PremierLeague"
                             element={<PremierLeague />}
                         />
-                        <Route path="/Contact" element={<Contact />} />
+                        <Route path="/OrderBuyer" element={<OrderBuyer />} />
                         <Route path="/Cart" element={<Cart />} />
                     </Routes>
 
