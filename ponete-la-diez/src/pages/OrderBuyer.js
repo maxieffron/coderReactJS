@@ -1,4 +1,4 @@
-import BuyerForm from "../components/Buyer/BuyerForm";
+import BuyerForm from "../components/Buyer";
 
 export default function OrderBuyer() {
     return (

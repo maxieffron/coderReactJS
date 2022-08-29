@@ -58,18 +58,22 @@ function ItemListContainer(props) {
                     };
                 });
 
-                Swal.fire(
-                    {
-                        title: "Bienvenido/a!!",
-                        text: "Ingresando al shopping...",
-                        icon: "success",
-                        showConfirmButton: false,
-                        timer: 2000,
-                    },
-                    setTimeout(() => {
-                        setProduct(getProductos);
-                    }, 2000)
-                );
+                if (props.showPopUp) {
+                    Swal.fire(
+                        {
+                            title: "Bienvenido/a!!",
+                            text: "Ingresando al shopping...",
+                            icon: "success",
+                            showConfirmButton: false,
+                            timer: 2000,
+                        },
+                        setTimeout(() => {
+                            setProduct(getProductos);
+                        }, 2000)
+                    );
+                } else {
+                    setProduct(getProductos);
+                }
             },
             (error) => {
                 console.log(`Error ${error} al obtener los datos de Firebase.`);

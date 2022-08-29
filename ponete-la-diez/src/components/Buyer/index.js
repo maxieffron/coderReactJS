@@ -1,6 +1,12 @@
 import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { getFirestore, collection, getDoc, setDoc } from "firebase/firestore";
+import {
+    getFirestore,
+    collection,
+    getDoc,
+    setDoc,
+    doc,
+} from "firebase/firestore";
 //Importamos el archivo ConfigFirebase.js, que contiene toda la configuración de la BD.
 import firebaseConfig from "../../config/ConfigFirebase";
 // Import the functions you need from the SDKs you need
@@ -18,6 +24,7 @@ const FieldInput = (props) => {
             tabIndex={props.tabIndex}
             type={props.type}
             className="field-input"
+            id={props.id}
         />
     );
 };
@@ -35,18 +42,18 @@ function BuyerForm() {
         setImports(imports);
     }, []);
 
-    function ConfirmBuy() {
+    function confirmBuy() {
         debugger;
-        const name = "Max"; // document.getElementById("name").value;
-        const surname = "Power"; // document.getElementById("surname").value;
-        const phone = "123456"; //document.getElementById("phone").value;
-        const email = "mpower@gmail.com"; //document.getElementById("email").value;
+        const name = document.getElementById("name").value;
+        const surname = document.getElementById("surname").value;
+        const phone = document.getElementById("phone").value;
+        const email = document.getElementById("email").value;
 
         debugger;
         insertRowOrder(name, surname, phone, email);
-        localStorage.clear();
-        removeAll();
-        navigateFn(`/`);
+        //localStorage.clear();
+        //removeAll();
+        //navigateFn(`/`);
 
         /*
         if (!isEmptyFields(name, surname, phone, email)) {
@@ -114,7 +121,7 @@ function BuyerForm() {
         const order = createOrder(name, surname, phone, email);
 
         // 4) Creamos una colección
-        const colOrders = collection(db, "orders");
+        const colOrders = doc(collection(db, "orders"));
 
         /* 5) Insertamos la orden en la Base de Datos.
         pasamos por parámetro la colección y la llamada para generar la orden.
@@ -125,7 +132,7 @@ function BuyerForm() {
         // 6) Esto nos devuelve una promesa
         newDoc
             .then((result) => {
-                console.log(result);
+                console.log("Se generó una orden con id: " + result.id);
             })
             .catch(console.log("Error al insertar orden de compra."));
     }
@@ -144,7 +151,6 @@ function BuyerForm() {
 
         //Creamos la orden
         const rowOrder = {
-            numberOrder: toString("22986").padStart(10, "0"),
             buyer: {
                 name: name,
                 surname: surname,
@@ -169,9 +175,11 @@ function BuyerForm() {
             <div id="buyerFormContainer">
                 <form>
                     <div id="formContainer">
+                        {/*
                         <label id="orderNumber">
                             <span>Orden de compra Nº: {`80201696`}</span>
                         </label>
+                        */}
                         {/*Nombre*/}
                         <FieldInput
                             placeholder={"Nombre"}
@@ -258,7 +266,7 @@ function BuyerForm() {
                         </div>
                         <button
                             id="btnSubmit"
-                            onClick={ConfirmBuy}
+                            onClick={confirmBuy}
                             tabIndex={5}
                         >
                             Confirmar

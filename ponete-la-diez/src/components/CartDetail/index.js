@@ -334,7 +334,7 @@ function CartDetail() {
                         Borrar Todo
                     </button>
                     <button onClick={endBuy} className="btnBuy">
-                        Finalizar Compra
+                        Comprar
                     </button>
                 </div>
             </div>
