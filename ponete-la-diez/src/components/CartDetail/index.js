@@ -9,6 +9,7 @@ import { CartContext } from "../../context/CartContext";
 //Importamos el hook "useContext" para poder acceder al contenido
 //del "CartContext"
 import { useContext, useEffect, useState } from "react";
+import "../../config/ConfigFirebase";
 //Importamos el css de este componente
 import "./CartDetail.css";
 
