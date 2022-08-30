@@ -5,6 +5,7 @@ import {
     collection,
     getDoc,
     setDoc,
+    doc,
     addDoc,
     serverTimestamp,
 } from "firebase/firestore";
@@ -52,8 +53,8 @@ function BuyerForm() {
         debugger;
         insertRowOrder(name, surname, phone, email);
         localStorage.clear();
-        //removeAll();
-        //navigateFn(`/`);
+        removeAll();
+        navigateFn(`/`);
 
         /*
         if (!isEmptyFields(name, surname, phone, email)) {
@@ -104,18 +105,30 @@ function BuyerForm() {
         console.log("Orden: " + order);
 
         // 4) Creamos una colección
-        const colOrders = collection(db, "orders");
+        //const colOrders = collection(db, "orders");
+        const colOrders = doc(collection(db, "orders"));
 
         /* 5) Insertamos la orden en la Base de Datos.
         pasamos por parámetro la colección y la llamada para generar la orden.
         con "setDoc", si el documento no existe, se crea. Si existe, se actualiza.
         */
-        const newDoc = addDoc(colOrders, order);
+
+        //const newDoc = addDoc(colOrders, order);
+        const newDoc = async () => {
+            await setDoc(colOrders, order);
+        };
 
         // 6) Esto nos devuelve una promesa
-        newDoc
-            .then(({ id }) => {
-                console.log("Se generó una orden con id: " + id);
+        newDoc()
+            .then((res) => {
+                alert("Se generó una orden con id: " + res.id);
+
+                /*
+                const colProducts = collection(db, "products");
+                for (const prod of cart) {
+                    const pepe = prod.nombre;
+                }
+                */
             })
             .catch((error) => alert(error));
     }
