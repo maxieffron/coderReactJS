@@ -143,7 +143,6 @@ function CartDetail() {
         cupon = cupon.toUpperCase();
         console.log(cupon);
         if (re.test(cupon)) {
-            console.log("Todo OK");
         } else {
             cupon = cupon.substr(0, cupon.length - 1);
             console.log(cupon);

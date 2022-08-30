@@ -51,30 +51,33 @@ function BuyerForm() {
         const email = document.getElementById("email").value;
 
         debugger;
-        insertRowOrder(name, surname, phone, email);
+        /*insertRowOrder(name, surname, phone, email);
         localStorage.clear();
         removeAll();
         navigateFn(`/`);
+        */
 
-        /*
         if (!isEmptyFields(name, surname, phone, email)) {
+            /*
             Swal.fire(
                 {
                     title: "Generando orden de compra...",
                     icon: "success",
                     showConfirmButton: false,
-                    timer: 2000,
                 },
                 setTimeout(() => {
-                    debugger;
                     insertRowOrder(name, surname, phone, email);
                     localStorage.clear();
                     removeAll();
                     navigateFn(`/`);
                 }, 2000)
             );
+            */
+            insertRowOrder(name, surname, phone, email);
+            localStorage.clear();
+            removeAll();
+            navigateFn(`/`);
         }
-        */
     }
 
     function isEmptyFields(name, surname, phone, email) {
@@ -142,7 +145,7 @@ function BuyerForm() {
             id: itemDB.id,
             title: itemDB.nombre,
             quantity: itemDB.cantidad,
-            price: itemDB.precio,
+            price: `${parseInt(itemDB.precio).toLocaleString("en")}`,
         }));
 
         //Creamos la orden
@@ -155,9 +158,9 @@ function BuyerForm() {
             },
             items: productsDB,
             quantityProducts: imports.cantProductos,
-            subTotal: imports.subTotal,
+            subTotal: `${parseInt(imports.subTotal).toLocaleString("en")}`,
             discount: imports.descuento,
-            total: imports.total,
+            total: `${parseInt(imports.total).toLocaleString("en")}`,
             date: serverTimestamp(),
         };
 
