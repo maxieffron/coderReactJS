@@ -5,7 +5,8 @@ import {
     collection,
     getDoc,
     setDoc,
-    doc,
+    addDoc,
+    serverTimestamp,
 } from "firebase/firestore";
 //Importamos el archivo ConfigFirebase.js, que contiene toda la configuración de la BD.
 import firebaseConfig from "../../config/ConfigFirebase";
@@ -43,7 +44,6 @@ function BuyerForm() {
     }, []);
 
     function confirmBuy() {
-        debugger;
         const name = document.getElementById("name").value;
         const surname = document.getElementById("surname").value;
         const phone = document.getElementById("phone").value;
@@ -51,15 +51,12 @@ function BuyerForm() {
 
         debugger;
         insertRowOrder(name, surname, phone, email);
-        //localStorage.clear();
+        localStorage.clear();
         //removeAll();
         //navigateFn(`/`);
 
         /*
         if (!isEmptyFields(name, surname, phone, email)) {
-           
-
-            
             Swal.fire(
                 {
                     title: "Generando orden de compra...",
@@ -75,23 +72,11 @@ function BuyerForm() {
                     navigateFn(`/`);
                 }, 2000)
             );
-            
-        } else {
-            alert("pepe");
         }
         */
     }
 
-    /*
     function isEmptyFields(name, surname, phone, email) {
-        /*
-        const name = document.getElementById("name").value;
-        const surname = document.getElementById("surname").value;
-        const phone = document.getElementById("phone").value;
-        const email = document.getElementById("email").value;
-
-        
-        
         if (
             name.length === 0 ||
             surname.length === 0 ||
@@ -102,10 +87,7 @@ function BuyerForm() {
         } else {
             return false;
         }
-        
-        alert("Pasé por acá");
-        return false;
-    }*/
+    }
 
     function insertRowOrder(name, surname, phone, email) {
         //Aquí se hace la inserción de la orden de compra en la Base de Datos
@@ -119,22 +101,23 @@ function BuyerForm() {
 
         // 3) Generamos la orden de compra a insertar en la BD
         const order = createOrder(name, surname, phone, email);
+        console.log("Orden: " + order);
 
         // 4) Creamos una colección
-        const colOrders = doc(collection(db, "orders"));
+        const colOrders = collection(db, "orders");
 
         /* 5) Insertamos la orden en la Base de Datos.
         pasamos por parámetro la colección y la llamada para generar la orden.
         con "setDoc", si el documento no existe, se crea. Si existe, se actualiza.
         */
-        const newDoc = setDoc(colOrders, order);
+        const newDoc = addDoc(colOrders, order);
 
         // 6) Esto nos devuelve una promesa
         newDoc
-            .then((result) => {
-                console.log("Se generó una orden con id: " + result.id);
+            .then(({ id }) => {
+                console.log("Se generó una orden con id: " + id);
             })
-            .catch(console.log("Error al insertar orden de compra."));
+            .catch((error) => alert(error));
     }
 
     // 3) Generamos la orden de compra a insertar en la BD
@@ -162,7 +145,7 @@ function BuyerForm() {
             subTotal: imports.subTotal,
             discount: imports.descuento,
             total: imports.total,
-            date: "06/02/1986",
+            date: serverTimestamp(),
         };
 
         return rowOrder;

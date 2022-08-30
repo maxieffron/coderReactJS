@@ -14,7 +14,7 @@ function ProductDetail(props) {
 
     function comeBackProducts() {
         //Se llama a la navegación que nos llevará a ver los productos
-        navigateFn(`/Products`);
+        navigateFn(`/`);
     }
 
     function addCartProducts() {
