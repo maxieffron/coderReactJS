@@ -76,6 +76,22 @@ h1 {
 }
 
 @media screen and (max-width: 992px) {
+    /* ------ flecha para volver arriba ------ */
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+    }
+
+    .back-to-top > i {
+        font-size: 22px;
+        position: absolute;
+        left: 6px;
+    }
+
+    .arrow-up {
+        height: 30px;
+    }
+
     /** ITEM-LIST **/
     .dataProduct-container {
         width: 40%;
@@ -102,21 +118,42 @@ h1 {
 
     /** CART-DETAIL **/
 
+    /*** La parte donde se va viendo el subtotal de la compra ***/
+    .detailContainer {
+        width: 60%;
+    }
+
+    /*La parte del detalle*/
+    .OrderSummaryContainer {
+        width: 35%;
+    }
+
+    /*--------------*/
+
     /*Contenedor de la Orden de Compra*/
     .OrderContainer {
-        height: 70%;
+        height: 60%;
     }
 
     /*Contenedor de los botones*/
     .btnBuyContainer {
-        height: 30%;
+        height: 40%;
     }
 
     /*Botones de Quitar todos los productos y Comprar*/
     .btnClear,
     .btnBuy {
         width: 80%;
+
         margin: 10px 0;
+    }
+
+    /* precios */
+    .prices > h3 {
+        font-size: 24px;
+    }
+    .prices > h4 {
+        font-size: 22px;
     }
 }
 
@@ -157,6 +194,99 @@ h1 {
     .button-AddCart {
         margin-top: 20px;
     }
+
+    /** CART-DETAIL **/
+
+    /*** La parte donde se va viendo el subtotal de la compra ***/
+    .detailContainer {
+        width: 60%;
+    }
+
+    /*La parte del detalle*/
+    .OrderSummaryContainer {
+        width: 35%;
+        min-height: 580px;
+    }
+
+    .itemDetailsHeader h4 {
+        width: 25%;
+        font-size: 20px;
+    }
+    .itemDetails h5 {
+        font-size: 18px;
+        margin-left: 6px;
+    }
+
+    .icon-trash {
+        font-size: 22px;
+    }
+
+    /*--------------*/
+    .titleContainer {
+        height: 15%;
+    }
+
+    .DiscountContainer {
+        height: 25%;
+    }
+    .postalCodeContainer {
+        height: 20%;
+    }
+
+    .priceContainer {
+        height: 20%;
+    }
+
+    .postalCodeContainer > input {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .postalCodeContainer > button {
+        width: 90%;
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .DiscountContainer > input {
+        width: 90%;
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .DiscountContainer > button {
+        width: 90%;
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /*Contenedor de la Orden de Compra*/
+    .OrderContainer {
+        height: 60%;
+    }
+
+    /*Contenedor de los botones*/
+    .btnBuyContainer {
+        height: 40%;
+    }
+
+    /*Botones de Quitar todos los productos y Comprar*/
+    .btnClear,
+    .btnBuy {
+        width: 90%;
+        height: 35px;
+    }
+
+    /* precios y descuentos */
+    .prices > h3 {
+        font-size: 22px;
+    }
+    .prices > h4 {
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -175,6 +305,27 @@ h1 {
     .Detail-info p {
         padding-left: 25px;
         font-size: 16px;
+    }
+
+    /** CART-DETAIL **/
+    .itemDetailsHeader h4 {
+        width: 25%;
+        font-size: 18px;
+    }
+    .itemDetails h5 {
+        font-size: 16px;
+    }
+
+    .icon-trash {
+        font-size: 20px;
+    }
+
+    /* precios y descuentos */
+    .prices > h3 {
+        font-size: 20px;
+    }
+    .prices > h4 {
+        font-size: 18px;
     }
 }
 
@@ -195,6 +346,29 @@ h1 {
     .button-AddCart {
         /*margin-top: 30px;*/
         width: 80%;
+    }
+
+    /** CART-DETAIL **/
+    .itemDetailsHeader h4 {
+        width: 25%;
+        font-size: 16px;
+    }
+    .itemDetails h5 {
+        font-size: 14px;
+    }
+
+    .icon-trash {
+        font-size: 18px;
+    }
+
+    /** CART-DETAIL **/
+
+    /* precios y descuentos */
+    .prices > h3 {
+        font-size: 18px;
+    }
+    .prices > h4 {
+        font-size: 16px;
     }
 }
 
@@ -239,6 +413,13 @@ h1 {
 
     .button-AddCart {
         margin-top: 12px;
+    }
+
+    /** CART-DETAIL **/
+
+    /*La parte del detalle*/
+    .OrderSummaryContainer {
+        min-height: 620px;
     }
 }
 

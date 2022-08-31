@@ -9,6 +9,8 @@ import { CartContext } from "../../context/CartContext";
 //Importamos el hook "useContext" para poder acceder al contenido
 //del "CartContext"
 import { useContext, useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import "../../config/ConfigFirebase";
 //Importamos el css de este componente
 import "./CartDetail.css";
@@ -68,6 +70,26 @@ function CartDetail() {
             btBuy.disabled = false;
         }
     });
+
+    function valideKey(event) {
+        /*
+    Función para validar si la tecla presionada es un número
+    */
+        // Nos guardamos el código ASCII de la tecla presionada
+        const code = event.which ? event.which : event.keyCode;
+
+        if (code === 8) {
+            // Si presionamos backspace es válido también.
+            return true;
+        } else if ((code >= 48 && code <= 57) || !code === 32) {
+            // Es un número
+            return true;
+        } else {
+            // Es otro caracter
+            event.preventDefault();
+            return false;
+        }
+    }
 
     //Aplicar descuento
     const ApplyDiscount = () => {
@@ -135,8 +157,8 @@ function CartDetail() {
         }
     };
 
-    function ValidateInputCupon() {
-        let cupon = document.getElementById("cuponDiscount").value;
+    function ValidateInputCupon(event) {
+        /*let cupon = document.getElementById("cuponDiscount").value;
         let cuponInput = document.getElementById("cuponDiscount");
         const re = new RegExp("^[a-zA-Z]+$");
 
@@ -147,6 +169,29 @@ function CartDetail() {
             cupon = cupon.substr(0, cupon.length - 1);
             console.log(cupon);
             cuponInput.value = cupon;
+        }*/
+
+        /*
+    Función para validar si la tecla presionada es un número
+    */
+
+        const re = new RegExp("^[a-zA-Z]+$");
+        // Nos guardamos el código ASCII de la tecla presionada
+        const code = event.which ? event.which : event.keyCode;
+
+        if (code === 8) {
+            // Si presionamos backspace es válido también.
+            return true;
+        } else if (
+            (code >= 48 && code <= 57) ||
+            (code === 32) & !re.test(code)
+        ) {
+            // Es un número
+            event.preventDefault();
+            return false;
+        } else {
+            // Es otro caracter
+            return true;
         }
     }
 
@@ -247,13 +292,24 @@ function CartDetail() {
                                             item.cantidad * item.precio
                                         ).toLocaleString("en")}`}
                                     </h5>
+
+                                    <FontAwesomeIcon
+                                        onClick={() => removeFromCart(item.id)}
+                                        className="icon-trash"
+                                        icon={faTrash}
+                                    />
+                                    {/*
                                     <button
                                         onClick={() => removeFromCart(item.id)}
                                         className="buttonDelete"
                                         id={`btnDelete-${item.id}`}
                                     >
-                                        Quitar Producto
+                                        <FontAwesomeIcon
+                                            className="icon-trash"
+                                            icon={faTrash}
+                                        />
                                     </button>
+                                        */}
                                 </div>
                             </div>
                         ))
@@ -268,9 +324,10 @@ function CartDetail() {
                     <div className="postalCodeContainer">
                         <input
                             tabIndex="1"
-                            type="text"
+                            type="tel"
                             placeholder="Ingrese Código Postal"
                             maxLength={4}
+                            onKeyPress={(evt) => valideKey(evt)}
                         ></input>
 
                         <button tabIndex="2">Calcular</button>
@@ -287,7 +344,9 @@ function CartDetail() {
                             title={
                                 "El cupón a ingresar debe contar con 6 caracteres"
                             }
-                            onKeyUp={ValidateInputCupon}
+                            onKeyPress={(evt) => {
+                                ValidateInputCupon(evt);
+                            }}
                         ></input>
 
                         <button

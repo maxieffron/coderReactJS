@@ -27,6 +27,7 @@ const FieldInput = (props) => {
             type={props.type}
             className="field-input"
             id={props.id}
+            onKeyPress={props.keyPress}
         />
     );
 };
@@ -43,6 +44,26 @@ function BuyerForm() {
         const imports = JSON.parse(localStorage.getItem("buyer"));
         setImports(imports);
     }, []);
+
+    function valideKey(event) {
+        /*
+    Función para validar si la tecla presionada es un número
+    */
+        // Nos guardamos el código ASCII de la tecla presionada
+        const code = event.which ? event.which : event.keyCode;
+
+        if (code === 8) {
+            // Si presionamos backspace es válido también.
+            return true;
+        } else if ((code >= 48 && code <= 57) || !code === 32) {
+            // Es un número
+            return true;
+        } else {
+            // Es otro caracter
+            event.preventDefault();
+            return false;
+        }
+    }
 
     function confirmBuy() {
         const name = document.getElementById("name").value;
@@ -199,8 +220,9 @@ function BuyerForm() {
                         <FieldInput
                             placeholder="Teléfono"
                             tabIndex={3}
-                            type="text"
+                            type="tel"
                             id={"phone"}
+                            keyPress={(evt) => valideKey(evt)}
                         />
 
                         {/*E-Mail*/}

@@ -69,14 +69,28 @@
     height: auto;
 }
 
-/* Botón "Quitar Producto" */
+/* Botón "Quitar Producto" 
 .buttonDelete {
-    padding: 6px;
+    padding: 12px;
     margin: 10px;
-    border-radius: 6px;
     font-weight: 600;
+    border-radius: 50%;
+}
+*/
+
+.icon-trash {
     background-color: var(--secondaryColor); /*Verde*/
     color: #ffffff;
+    margin: 10px;
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 25px;
+    border: 1px solid #000000;
+}
+
+.icon-trash:hover {
+    cursor: pointer;
+    background-color: var(--primaryColor); /*Azul*/
 }
 
 /*** La parte donde se va viendo el subtotal de la compra ***/
