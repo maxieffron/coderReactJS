@@ -137,24 +137,14 @@ function BuyerForm() {
         con "setDoc", si el documento no existe, se crea. Si existe, se actualiza.
         */
 
-        //const newDoc = addDoc(colOrders, order);
         const newDoc = async () => {
-            await setDoc(colOrders, order);
+            await setDoc(colOrders, order)
+                .then(({ id }) => {
+                    alert("Se generó una orden con id: ", id);
+                })
+                .catch((error) => alert(error));
         };
-
-        // 6) Esto nos devuelve una promesa
-        newDoc()
-            .then((res) => {
-                alert("Se generó una orden con id: " + res.id);
-
-                /*
-                const colProducts = collection(db, "products");
-                for (const prod of cart) {
-                    const pepe = prod.nombre;
-                }
-                */
-            })
-            .catch((error) => alert(error));
+        newDoc();
     }
 
     // 3) Generamos la orden de compra a insertar en la BD
