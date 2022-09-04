@@ -1,5 +1,5 @@
 #buyerFormContainer {
-    width: 60%;
+    width: 70%;
     min-height: 350px;
     margin-left: auto;
     margin-right: auto;
@@ -71,6 +71,7 @@
     display: inline-block;
     width: 25%;
     text-align: center;
+    padding-left: 10px;
 }
 .orderItems h4 {
     color: var(--primaryColor);
@@ -100,13 +101,13 @@
 .rowTotalOrder h3,
 .rowTotalOrder h4 {
     text-align: left;
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 .totalOrder h3,
 .totalOrder h4 {
     text-align: right;
-    padding-right: 20px;
+    padding-right: 10px;
 }
 
 .rowTotalOrder h3,

@@ -287,6 +287,28 @@ h1 {
     .prices > h4 {
         font-size: 20px;
     }
+
+    /** BUYER **/
+
+    .field-input {
+        padding: 2px;
+    }
+
+    .columnItems h4,
+    .orderItems h4,
+    .rowTotalOrder h4,
+    .totalOrder h4 {
+        font-size: 110%;
+    }
+
+    .rowTotalOrder h3,
+    .totalOrder h3 {
+        font-size: 150%;
+    }
+
+    #btnSubmit {
+        font-size: 120%;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -334,6 +356,29 @@ h1 {
     }
     .prices > h4 {
         font-size: 18px;
+    }
+
+    /** BUYER **/
+
+    #buyerFormContainer {
+        width: 80%;
+    }
+
+    .field-input {
+        width: 80%;
+        padding: 0;
+    }
+
+    .columnItems h4,
+    .orderItems h4,
+    .rowTotalOrder h4,
+    .totalOrder h4 {
+        font-size: 100%;
+    }
+
+    .rowTotalOrder h3,
+    .totalOrder h3 {
+        font-size: 120%;
     }
 }
 
@@ -385,6 +430,23 @@ h1 {
     }
     .prices > h4 {
         font-size: 16px;
+    }
+
+    /** BUYER **/
+    .columnItems h4,
+    .orderItems h4,
+    .rowTotalOrder h4,
+    .totalOrder h4 {
+        font-size: 100%;
+    }
+
+    .rowTotalOrder h3,
+    .totalOrder h3 {
+        font-size: 110%;
+    }
+
+    #btnSubmit {
+        font-size: 100%;
     }
 }
 
@@ -459,6 +521,28 @@ h1 {
     .DiscountContainer > input {
         font-size: 8px;
     }
+
+    /** BUYER **/
+
+    .field-input {
+        font-size: 100%;
+    }
+
+    .columnItems h4,
+    .orderItems h4,
+    .rowTotalOrder h4,
+    .totalOrder h4 {
+        font-size: 80%;
+    }
+
+    .rowTotalOrder h3,
+    .totalOrder h3 {
+        font-size: 90%;
+    }
+
+    #btnSubmit {
+        font-size: 80%;
+    }
 }
 
 @media screen and (max-width: 300px) {
@@ -490,6 +574,28 @@ h1 {
     .itemDetails h5 {
         font-size: 7px;
     }
+
+    /** BUYER **/
+
+    .field-input {
+        font-size: 90%;
+    }
+
+    .columnItems h4,
+    .orderItems h4,
+    .rowTotalOrder h4,
+    .totalOrder h4 {
+        font-size: 70%;
+    }
+
+    .rowTotalOrder h3,
+    .totalOrder h3 {
+        font-size: 80%;
+    }
+
+    #btnSubmit {
+        font-size: 70%;
+    }
 }
 
 @media screen and (max-width: 250px) {
@@ -512,5 +618,27 @@ h1 {
 
     .Detail-info p {
         font-size: 10px;
+    }
+
+    /** BUYER **/
+
+    .field-input {
+        font-size: 80%;
+    }
+
+    .columnItems h4,
+    .orderItems h4,
+    .rowTotalOrder h4,
+    .totalOrder h4 {
+        font-size: 60%;
+    }
+
+    .rowTotalOrder h3,
+    .totalOrder h3 {
+        font-size: 70%;
+    }
+
+    #btnSubmit {
+        font-size: 60%;
     }
 }

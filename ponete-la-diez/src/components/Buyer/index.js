@@ -14,7 +14,7 @@ import firebaseConfig from "../../config/ConfigFirebase";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { CartContext } from "../../context/CartContext";
-import "./BuyerForm.css";
+import "./Buyer.css";
 import Swal from "sweetalert2";
 
 //Componente
