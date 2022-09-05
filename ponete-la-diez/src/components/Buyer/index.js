@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom";
 import {
     getFirestore,
     collection,
-    getDoc,
     setDoc,
+    updateDoc,
+    increment,
     doc,
-    addDoc,
     serverTimestamp,
 } from "firebase/firestore";
 //Importamos el archivo ConfigFirebase.js, que contiene toda la configuración de la BD.
@@ -40,15 +40,33 @@ function BuyerForm() {
     const navigateFn = useNavigate();
 
     useEffect(() => {
-        //Nos traemos del localStorage todos los parciales,totales y descuentos
-        const imports = JSON.parse(localStorage.getItem("buyer"));
-        setImports(imports);
-    }, []);
+        if (cart.length === 0) {
+            /*Esto puede pasar porque le di refresh a la página y se perdieron los 
+            productos. Al no tenerlos en el Storage, hay que inicializar los totalizadores
+            e inhabilitar el botón "Confirmar"
+            */
+            const btnConfirm = document.getElementById("btnSubmit");
+            const buyerImports = {
+                cantProductos: 0,
+                subTotal: 0,
+                descuento: 0,
+                total: 0,
+            };
+            setImports(buyerImports);
+            localStorage.removeItem("buyer");
+            btnConfirm.setAttribute("style", "background-color:#c4c4c4;");
+            btnConfirm.disabled = true;
+        } else {
+            //Actualizamos "imports" con lo productos que hay en el carrito.
+            setImports(JSON.parse(localStorage.getItem("buyer")));
+        }
+    }, [cart.length]);
 
-    function valideKey(event) {
+    function valideKeyNumber(event) {
         /*
-    Función para validar si la tecla presionada es un número
-    */
+        Valida que el caracter ingresado SEA UN NÚMERO
+        */
+
         // Nos guardamos el código ASCII de la tecla presionada
         const code = event.which ? event.which : event.keyCode;
 
@@ -65,53 +83,122 @@ function BuyerForm() {
         }
     }
 
-    function confirmBuy() {
+    function validateKey(event) {
+        /*
+        Valida que el caracter ingresado NO SEA UN NÚMERO
+        */
+
+        const re = new RegExp("^[a-zA-Z]+$");
+        // Nos guardamos el código ASCII de la tecla presionada
+        const code = event.which ? event.which : event.keyCode;
+
+        if (code === 8 || code === 32) {
+            // Si presionamos backspace o space es válido también.
+            return true;
+        } else if ((code >= 48 && code <= 57) || re.test(code)) {
+            // Es un número
+            event.preventDefault();
+            return false;
+        } else {
+            // Es otro caracter
+            return true;
+        }
+    }
+
+    function confirmBuy(e) {
+        e.preventDefault();
+
         const name = document.getElementById("name").value;
         const surname = document.getElementById("surname").value;
         const phone = document.getElementById("phone").value;
         const email = document.getElementById("email").value;
+        const emailConf = document.getElementById("emailConf").value;
 
         debugger;
-        /*insertRowOrder(name, surname, phone, email);
-        localStorage.clear();
-        removeAll();
-        navigateFn(`/`);
-        */
 
-        if (!isEmptyFields(name, surname, phone, email)) {
-            /*
-            Swal.fire(
-                {
-                    title: "Generando orden de compra...",
-                    icon: "success",
-                    showConfirmButton: false,
-                },
-                setTimeout(() => {
-                    insertRowOrder(name, surname, phone, email);
-                    localStorage.clear();
-                    removeAll();
-                    navigateFn(`/`);
-                }, 2000)
-            );
-            */
-            insertRowOrder(name, surname, phone, email);
-            localStorage.clear();
-            removeAll();
-            navigateFn(`/`);
+        if (!isEmptyFields(name, surname, phone, email, emailConf)) {
+            if (!(email === emailConf)) {
+                Swal.fire({
+                    title: "eMails diferentes",
+                    icon: "error",
+                    text: "El eMail ingresado debe coincidir con el campo de confirmación de eMail.",
+                    showConfirmButton: true,
+                });
+            } else {
+                // TODO OK
+                Swal.fire(
+                    {
+                        title: "Generando orden de compra...",
+                        showConfirmButton: false,
+                    },
+                    setTimeout(() => {
+                        insertRowOrder(name, surname, phone, email);
+                        localStorage.clear();
+                        removeAll();
+                        navigateFn(`/`);
+                    }, 2000)
+                );
+            }
         }
     }
 
-    function isEmptyFields(name, surname, phone, email) {
-        if (
-            name.length === 0 ||
-            surname.length === 0 ||
-            phone.length === 0 ||
-            email.length === 0
-        ) {
+    function isEmptyFields(name, surname, phone, email, emailConf) {
+        //Campo Nombre
+        if (name.length === 0) {
+            Swal.fire({
+                title: "Campo incompleto",
+                icon: "error",
+                text: "Es obligatorio ingresar un nombre.",
+                showConfirmButton: true,
+            });
             return true;
-        } else {
-            return false;
         }
+
+        //Campo Apellido
+        if (surname.length === 0) {
+            Swal.fire({
+                title: "Campo incompleto",
+                icon: "error",
+                text: "Es obligatorio ingresar un apellido.",
+                showConfirmButton: true,
+            });
+            return true;
+        }
+
+        //Campo Teléfono
+        if (phone.length === 0) {
+            Swal.fire({
+                title: "Campo incompleto",
+                icon: "error",
+                text: "Es obligatorio ingresar un teléfono.",
+                showConfirmButton: true,
+            });
+            return true;
+        }
+
+        //Campo eMail
+        if (email.length === 0) {
+            Swal.fire({
+                title: "Campo incompleto",
+                icon: "error",
+                text: "Es obligatorio ingresar un eMail.",
+                showConfirmButton: true,
+            });
+            return true;
+        }
+
+        //Campo Confirmación eMail
+        if (emailConf.length === 0) {
+            Swal.fire({
+                title: "Campo incompleto",
+                icon: "error",
+                text: "Es obligatorio confirmar eMail ingresado en el campo anterior.",
+                showConfirmButton: true,
+            });
+            return true;
+        }
+
+        return false;
     }
 
     function insertRowOrder(name, surname, phone, email) {
@@ -139,10 +226,37 @@ function BuyerForm() {
 
         const newDoc = async () => {
             await setDoc(colOrders, order)
-                .then(({ id }) => {
-                    alert("Se generó una orden con id: ", id);
+                .then(() => {
+                    /*Aquí debemos actualizar el stock en la BD de Productos.
+                    Para ello recorremos todo el carrito. 
+                    */
+                    for (const dataStock of cart) {
+                        const colProducts = doc(
+                            db,
+                            "products",
+                            `${dataStock.id}`
+                        );
+
+                        updateDoc(colProducts, {
+                            stock: increment(`${-dataStock.cantidad}`),
+                        });
+                    }
+
+                    Swal.fire({
+                        title: `La orden de compra fue generada correctamente.`,
+                        text: "Muchas gracias por elegirnos!!",
+                        icon: "success",
+                        time: 4000,
+                    });
                 })
-                .catch((error) => alert(error));
+                .catch((error) => {
+                    Swal.fire({
+                        title: `Error al generar la orden de compra.`,
+                        text: "Por favor, comuníquese con el local para solucionar el inconveniente.",
+                        icon: "error",
+                        time: 6000,
+                    });
+                });
         };
         newDoc();
     }
@@ -196,6 +310,7 @@ function BuyerForm() {
                             tabIndex={1}
                             type={"text"}
                             id={"name"}
+                            keyPress={(evt) => validateKey(evt)}
                         />
 
                         {/*Apellido*/}
@@ -204,6 +319,7 @@ function BuyerForm() {
                             tabIndex={2}
                             type="text"
                             id={"surname"}
+                            keyPress={(evt) => validateKey(evt)}
                         />
 
                         {/*Teléfono*/}
@@ -212,15 +328,23 @@ function BuyerForm() {
                             tabIndex={3}
                             type="tel"
                             id={"phone"}
-                            keyPress={(evt) => valideKey(evt)}
+                            keyPress={(evt) => valideKeyNumber(evt)}
                         />
 
                         {/*E-Mail*/}
                         <FieldInput
-                            placeholder="E-Mail"
+                            placeholder="e-Mail"
                             tabIndex={4}
                             type="email"
                             id={"email"}
+                        />
+
+                        {/*E-Mail*/}
+                        <FieldInput
+                            placeholder="Confirmar e-Mail"
+                            tabIndex={5}
+                            type="email"
+                            id={"emailConf"}
                         />
 
                         <div id="orderItemsContainer">
@@ -277,7 +401,7 @@ function BuyerForm() {
                         </div>
                         <button
                             id="btnSubmit"
-                            onClick={confirmBuy}
+                            onClick={(evt) => confirmBuy(evt)}
                             tabIndex={5}
                         >
                             Confirmar

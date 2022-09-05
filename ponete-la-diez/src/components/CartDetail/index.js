@@ -333,7 +333,7 @@ function CartDetail() {
                         <button tabIndex="2">Calcular</button>
                     </div>
 
-                    <div className="DiscountContainer">
+                    <div className="discountContainer">
                         <input
                             tabIndex="3"
                             id="cuponDiscount"

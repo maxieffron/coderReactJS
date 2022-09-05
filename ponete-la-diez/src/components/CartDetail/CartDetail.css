@@ -140,6 +140,11 @@
     border-style: solid;
 }
 
+.postalCodeContainer > input:focus {
+    outline: transparent; /*Quitamos el borde negro al hacer foco*/
+    border: 2px solid var(--secondaryColor);
+}
+
 .postalCodeContainer > button {
     height: 35px;
     width: 35%;
@@ -152,13 +157,13 @@
 }
 
 .postalCodeContainer > button:hover,
-.DiscountContainer > button:hover {
+.discountContainer > button:hover {
     font-weight: 600;
 }
 /*------------------------------------------------------------*/
 
 /*Cupones de descuento --> Dentro de OrderContainer*/
-.DiscountContainer {
+.discountContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -167,7 +172,7 @@
     /*background-color: crimson;*/
 }
 
-.DiscountContainer > input {
+.discountContainer > input {
     height: 35px;
     width: 45%;
     margin-top: 20px;
@@ -178,7 +183,12 @@
     text-transform: uppercase;
 }
 
-.DiscountContainer > button {
+.discountContainer > input:focus {
+    outline: transparent; /*Quitamos el borde negro al hacer foco*/
+    border: 2px dashed var(--secondaryColor);
+}
+
+.discountContainer > button {
     height: 35px;
     width: 35%;
     margin-top: 20px;

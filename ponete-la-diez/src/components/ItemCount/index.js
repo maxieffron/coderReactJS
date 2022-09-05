@@ -35,8 +35,6 @@ export default function ItemCount(props) {
 
     function sustProduct() {
         if (cantProducts <= 1) {
-            //alert("Al menos debe haber un producto disponible");
-
             swal.fire({
                 title: "Al menos debe haber un producto seleccionado",
                 icon: "warning",
