@@ -35,7 +35,8 @@
     border-radius: 4px;
 }
 
-.nav-Items:hover {
+.nav-Items:hover,
+.activo {
     background-color: var(--secondaryColor); /*Verde*/
     color: var(--fontColorGeneral);
 }
