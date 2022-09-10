@@ -114,8 +114,6 @@ function BuyerForm() {
         const email = document.getElementById("email").value;
         const emailConf = document.getElementById("emailConf").value;
 
-        debugger;
-
         if (!isEmptyFields(name, surname, phone, email, emailConf)) {
             if (!(email === emailConf)) {
                 Swal.fire({
@@ -130,12 +128,13 @@ function BuyerForm() {
                     {
                         title: "Generando orden de compra...",
                         showConfirmButton: false,
+                        html: `<div class="progressBar"></div>`,
                     },
                     setTimeout(() => {
                         insertRowOrder(name, surname, phone, email);
-                        localStorage.clear();
+                        /*localStorage.clear();
                         removeAll();
-                        navigateFn(`/`);
+                        navigateFn(`/`);*/
                     }, 2000)
                 );
             }
@@ -242,12 +241,22 @@ function BuyerForm() {
                         });
                     }
 
-                    Swal.fire({
-                        title: `La orden de compra fue generada correctamente.`,
-                        text: "Muchas gracias por elegirnos!!",
-                        icon: "success",
-                        time: 4000,
-                    });
+                    Swal.fire(
+                        {
+                            title: `La orden de compra fue generada correctamente.\n Muchas gracias por elegirnos!!`,
+                            imageUrl: "./logo.png",
+                            imageWidth: 150,
+                            imageHeight: 150,
+                            imageAlt: "Ponete La Diez",
+                            showConfirmButton: false,
+                            time: 6000,
+                        },
+                        setTimeout(() => {
+                            localStorage.clear();
+                            removeAll();
+                            navigateFn(`/`);
+                        }, 2000)
+                    );
                 })
                 .catch((error) => {
                     Swal.fire({

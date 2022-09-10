@@ -16,6 +16,7 @@ import Cart from "./pages/Cart";
 import ProductDetailContainer from "./components/Detail/ProductDetailContainer";
 //Importamos el CartContext
 import CartCustomContext from "./context/CartContext";
+import Footer from "./components/Footer";
 
 function App() {
     return (
@@ -50,6 +51,7 @@ function App() {
                             ></img>
                         </i>
                     </a>
+                    <Footer />
                 </div>
             </BrowserRouter>
         </CartCustomContext>

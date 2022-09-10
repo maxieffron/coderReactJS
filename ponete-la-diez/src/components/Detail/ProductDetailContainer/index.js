@@ -70,11 +70,9 @@ export default function ProductDetailContainer() {
     }, [idProdu]);
 
     return (
-        <div>
+        <div className="ProductDetailContainer">
             <h1>Detalle</h1>
-            <div className="ProductDetailContainer">
-                <ProductDetail key={prod.id} {...prod} />
-            </div>
+            <ProductDetail key={prod.id} {...prod} />
         </div>
     );
 }

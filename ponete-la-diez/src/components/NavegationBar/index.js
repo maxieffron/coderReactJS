@@ -23,16 +23,10 @@ const LinkMenu = (props) => {
 
         if (!(linkSelected.id === elementActive.id)) {
             document.querySelectorAll(".nav-Items").forEach((element) => {
-                document.querySelector(".navbar-toggler").click();
-
-                /*
-                if (!elementActive === element.classList.contains("activo")) {
-                    //Si son diferentes, removemos la clase "active" de item anterior y lo asignamos
-                    //al elemento actual.
-                    elementActive.classList.remove("activo");
-                    element.classList.add("activo");
+                if (window.screen.availWidth <= 992) {
+                    document.querySelector(".navbar-toggler").click();
                 }
-                */
+
                 if (
                     !(
                         linkSelected.id ===

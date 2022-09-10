@@ -471,7 +471,11 @@ h1 {
     /** PRODUCT-DETAIL **/
 
     .Detail-info-Container {
-        height: 80%;
+        height: 70%;
+    }
+
+    .Detail-photo-Container {
+        height: 30%;
     }
 
     .Detail-info h4 {
@@ -612,9 +616,9 @@ h1 {
     }
 
     /** PRODUCT-DETAIL **/
-    .Detail-info-Container {
-        height: 80%;
-    }
+    /*.Detail-info-Container {
+        height: 70%;
+    }*/
 
     .Detail-info h4 {
         font-size: 12px;
