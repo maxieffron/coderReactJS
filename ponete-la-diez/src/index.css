@@ -197,15 +197,22 @@ h1 {
 
     /** CART-DETAIL **/
 
+    .cartDetailContainer {
+        flex-direction: column;
+        align-content: center;
+    }
+
     /*** La parte donde se va viendo el subtotal de la compra ***/
     .detailContainer {
-        width: 60%;
+        width: 90%;
+        margin: 20px 0 30px 0;
     }
 
     /*La parte del detalle*/
     .OrderSummaryContainer {
-        width: 35%;
-        min-height: 580px;
+        width: 90%;
+        align-self: center;
+        /*min-height: 580px;*/
     }
 
     .itemDetailsHeader h4 {
@@ -222,61 +229,46 @@ h1 {
     }
 
     /*--------------*/
-    .titleContainer {
-        height: 15%;
+
+    .postalCodeContainer {
+        height: 20%;
+        /*margin: 10px 0 10px 0;*/
     }
 
     .discountContainer {
-        height: 25%;
-    }
-    .postalCodeContainer {
         height: 20%;
+        /*margin: 10px 0 10px 0;*/
     }
 
     .priceContainer {
         height: 20%;
     }
 
-    .postalCodeContainer > input {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .postalCodeContainer > button {
-        width: 90%;
-        margin-top: 15px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .discountContainer > input {
-        width: 90%;
-        margin-top: 15px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
+    .postalCodeContainer > input,
+    .postalCodeContainer > button,
+    .discountContainer > input,
     .discountContainer > button {
-        width: 90%;
-        margin-top: 15px;
-        margin-left: auto;
-        margin-right: auto;
+        width: 40%;
+        margin: 15px auto;
     }
 
     /*Contenedor de la Orden de Compra*/
     .OrderContainer {
         height: 60%;
+        flex-direction: column;
+        justify-content: none;
     }
 
     /*Contenedor de los botones*/
     .btnBuyContainer {
         height: 40%;
+        padding: 10px 0;
     }
 
     /*Botones de Quitar todos los productos y Comprar*/
     .btnClear,
     .btnBuy {
-        width: 90%;
+        width: 45%;
         height: 35px;
     }
 
@@ -346,6 +338,7 @@ h1 {
         font-size: 20px;
     }
 
+    /*
     .postalCodeContainer > input {
         font-size: 14px;
     }
@@ -353,6 +346,7 @@ h1 {
     .discountContainer > input {
         font-size: 14px;
     }
+    */
 
     /* precios y descuentos */
     .prices > h3 {
@@ -411,7 +405,7 @@ h1 {
         font-size: 13px;
     }
     .itemDetails h5 {
-        font-size: 11px;
+        font-size: 14px;
     }
 
     .icon-trash {
@@ -421,11 +415,11 @@ h1 {
     }
 
     .postalCodeContainer > input {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .discountContainer > input {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     /* precios y descuentos */
@@ -508,7 +502,7 @@ h1 {
         font-size: 11px;
     }
     .itemDetails h5 {
-        font-size: 9px;
+        font-size: 12px;
     }
 
     .icon-trash {
@@ -518,16 +512,26 @@ h1 {
     }
 
     /*** Precios y Descuentos ***/
-    .OrderSummaryContainer {
+
+    /*.OrderSummaryContainer {
         min-height: 720px;
     }
+    */
 
-    .postalCodeContainer > input {
-        font-size: 8px;
+    .postalCodeContainer > input,
+    .postalCodeContainer > button,
+    .discountContainer > input,
+    .discountContainer > button {
+        width: 80%;
+        margin: 15px auto;
     }
 
-    .discountContainer > input {
-        font-size: 8px;
+    /*Botones de Quitar todos los productos y Comprar*/
+    .btnClear,
+    .btnBuy {
+        width: 80%;
+
+        margin: 10px 0;
     }
 
     /** BUYER **/
@@ -579,9 +583,11 @@ h1 {
     .itemDetailsHeader h4 {
         font-size: 9px;
     }
+    /*
     .itemDetails h5 {
         font-size: 7px;
     }
+    */
 
     /** BUYER **/
 

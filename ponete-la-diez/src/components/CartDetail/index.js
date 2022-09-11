@@ -318,9 +318,6 @@ function CartDetail() {
 
             <div className="OrderSummaryContainer">
                 <div className="OrderContainer">
-                    <div className="titleContainer">
-                        <h2>Orden de Compra</h2>
-                    </div>
                     <div className="postalCodeContainer">
                         <input
                             tabIndex="1"
