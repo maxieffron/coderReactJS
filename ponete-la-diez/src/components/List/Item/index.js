@@ -39,7 +39,12 @@ function Item(props) {
                     <h3>{props.dataProduct.nombre}</h3>
                 </div>
                 <div className="product-info">
-                    <p>Precio:{props.dataProduct.precio}</p>
+                    <p>
+                        Precio:
+                        {`$${parseInt(props.dataProduct.precio).toLocaleString(
+                            "en"
+                        )}`}
+                    </p>
                     <p>Stock:{props.dataProduct.stock}</p>
                 </div>
                 <div className="product-detail">

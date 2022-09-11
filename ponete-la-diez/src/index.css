@@ -100,6 +100,9 @@ h1 {
     /** PRODUCT-DETAIL **/
 
     .Detail-info-Container {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
         width: 65%;
         margin-bottom: 20px;
     }
@@ -148,6 +151,14 @@ h1 {
         margin: 10px 0;
     }
 
+    .itemDetailsHeader h4 {
+        font-size: 22px;
+    }
+
+    .itemDetails h5 {
+        font-size: 20px;
+    }
+
     /* precios */
     .prices > h3 {
         font-size: 24px;
@@ -179,9 +190,9 @@ h1 {
     }
 
     /*Container de los botones "Volver" y "Agregar al carrito"*/
-    .buttons-detail {
+    /*.buttons-detail {
         margin-bottom: 50px;
-    }
+    }*/
 
     /* Botones "Volver" y "Agregar al carrito"*/
     .button-ComeBack,
@@ -464,9 +475,10 @@ h1 {
 
     /** PRODUCT-DETAIL **/
 
-    .Detail-info-Container {
-        height: 70%;
+    /*.Detail-info-Container {
+        height: 80%;
     }
+    */
 
     .Detail-photo-Container {
         height: 30%;
@@ -502,7 +514,7 @@ h1 {
         font-size: 11px;
     }
     .itemDetails h5 {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .icon-trash {
@@ -559,6 +571,10 @@ h1 {
 
 @media screen and (max-width: 300px) {
     /** PRODUCT-DETAIL **/
+
+    /*.Detail-info-Container {
+        height: 80%;
+    }*/
 
     .Detail-info h4 {
         font-size: 12px;
@@ -623,8 +639,12 @@ h1 {
 
     /** PRODUCT-DETAIL **/
     /*.Detail-info-Container {
-        height: 70%;
-    }*/
+        height: 90%;
+    }
+    */
+    .Detail-photo-Container {
+        height: 25%;
+    }
 
     .Detail-info h4 {
         font-size: 12px;

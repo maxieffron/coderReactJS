@@ -33,6 +33,7 @@
 
 .itemDetailsHeader h4 {
     width: 25%;
+    font-size: 24px;
 }
 
 .itemDetailsContainer {
@@ -57,6 +58,7 @@
     /*display: inline-block;*/
     color: var(--primaryColor); /*Azul*/
     margin-top: 20%;
+    font-size: 22px;
 }
 
 .itemDetails > .name-product {
@@ -65,7 +67,7 @@
 
 /*Imágen del producto*/
 .itemImage {
-    width: 50%;
+    width: 80%;
     height: auto;
 }
 
