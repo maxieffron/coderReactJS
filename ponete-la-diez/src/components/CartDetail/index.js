@@ -148,32 +148,11 @@ function CartDetail() {
                     setDiscount(0);
                     break;
             }
-
-            /*
-            //Una vez que aplicamos el descuento, bloqueamos el botón
-            btDiscount.setAttribute("style", "background-color:#c4c4c4;");
-            btDiscount.disabled = true;
-            */
         }
     };
 
     function ValidateInputCupon(event) {
-        /*let cupon = document.getElementById("cuponDiscount").value;
-        let cuponInput = document.getElementById("cuponDiscount");
-        const re = new RegExp("^[a-zA-Z]+$");
-
-        cupon = cupon.toUpperCase();
-        console.log(cupon);
-        if (re.test(cupon)) {
-        } else {
-            cupon = cupon.substr(0, cupon.length - 1);
-            console.log(cupon);
-            cuponInput.value = cupon;
-        }*/
-
-        /*
-    Función para validar si la tecla presionada es un número
-    */
+        /*    Función para validar si la tecla presionada es un número    */
 
         const re = new RegExp("^[a-zA-Z]+$");
         // Nos guardamos el código ASCII de la tecla presionada
