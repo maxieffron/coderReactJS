@@ -1,10 +1,10 @@
 // Configuración de la Base de Datos Firebase
 const firebaseConfig = {
-    apiKey: "AIzaSyANzBHCQheCSOyDV9Cri-L8cJ4pdM_ljNM",
-    authDomain: "poneteladiez-bc3ef.firebaseapp.com",
-    projectId: "poneteladiez-bc3ef",
-    storageBucket: "poneteladiez-bc3ef.appspot.com",
-    messagingSenderId: "525504420004",
-    appId: "1:525504420004:web:fa6242a22e280a7dc3ee31",
+    apiKey: "AIzaSyCe85MAs3m8S88E6bLhevPSxM9XrBRtJOo",
+    authDomain: "ponete-la-diez.firebaseapp.com",
+    projectId: "ponete-la-diez",
+    storageBucket: "ponete-la-diez.appspot.com",
+    messagingSenderId: "600646683220",
+    appId: "1:600646683220:web:d4cd01e9f8702eb4883bc1",
 };
 export default firebaseConfig;
